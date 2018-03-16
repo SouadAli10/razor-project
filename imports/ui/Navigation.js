@@ -8,7 +8,7 @@ export default () =>
                 </div>
 
                 <div className="collapse navbar-collapse navbar-main-collapse">
-                    <ul className="nav navbar-nav">
+                    <ul className="nav navbar-nav"> 
 
                         <li className="hidden"> <a href="#page-top"></a> </li>
                         <li> <a className="page-scroll" href="#about">About</a> </li>
