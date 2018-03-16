@@ -5,20 +5,11 @@ import AccountsUIWrapper from './AccountsUIWrapper.js';
 import { Tasks } from '../api/tasks.js';
 import Task from './Task.js';
 import { Meteor } from 'meteor/meteor';
-import Portfolio from './Portfolio'
+import Portfolio from './Portfolio';
 //import Contact from './Contact'
 import { setTimeout } from 'timers';
+import Map from './Map';
 
-
-function showmap(ref) {
-  var mapOptions = {
-    zoom: 8,
-    scrollwheel: false,
-    center: new google.maps.LatLng(-34.397, 150.644),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(ref, mapOptions);
-}
 
 // App component - represents the whole app
 class App extends Component {
@@ -28,11 +19,6 @@ class App extends Component {
     this.state = {
       hideCompleted: false,
     };
-  }
-
-  componentDidMount() {
-    const map = this.map
-    showmap(map)
   }
 
   handleSubmit(event) {
@@ -79,8 +65,8 @@ class App extends Component {
   render() {
 
     return (
-      <div className="my-site-wrapper">
 
+      <div className="my-site-wrapper">
         <header id="header">
           <div className="intro">
             <div className="container">
@@ -116,7 +102,6 @@ class App extends Component {
             </div>
           </nav>
         </div>
-        <div ref={(el) => this.map = el} id="map_canvas" style={{ height: 300 }} />
 
         <div id="about">
           <div className="container">
@@ -135,7 +120,28 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <div id="geo">
+          <div className="container">
+            <div className="section-title text-center center">
+              <h2>Geolocation</h2>
+              <hr />
+            </div>
+            <div className="row">
+            </div>
+          </div>
+          <Map />
+        </div>
+        <div id="Team">
+          <div className="container">
+            <div className="section-title text-center center">
+              <h2>Meet Our Team</h2>
+              <hr />
+            </div>
+            <div className="row">
+            </div>
+          </div>
 
+        </div>
         <Portfolio />
         <div id="contact" className="text-center">
           <div className="container">
