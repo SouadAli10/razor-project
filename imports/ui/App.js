@@ -6,8 +6,19 @@ import { Tasks } from '../api/tasks.js';
 import Task from './Task.js';
 import { Meteor } from 'meteor/meteor';
 import Portfolio from './Portfolio'
-import Contact from './Contact'
+//import Contact from './Contact'
+import { setTimeout } from 'timers';
 
+
+function showmap(ref) {
+  var mapOptions = {
+    zoom: 8,
+    scrollwheel: false,
+    center: new google.maps.LatLng(-34.397, 150.644),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(ref, mapOptions);
+}
 
 // App component - represents the whole app
 class App extends Component {
@@ -17,6 +28,11 @@ class App extends Component {
     this.state = {
       hideCompleted: false,
     };
+  }
+
+  componentDidMount() {
+    const map = this.map
+    showmap(map)
   }
 
   handleSubmit(event) {
@@ -70,9 +86,9 @@ class App extends Component {
             <div className="container">
               <div className="row">
                 <div className="intro-text">
-                  <h1>Magnum</h1>
+                  <h1>Razor Co.</h1>
                   <hr />
-                  <p>Graphic Design • Illustration • Photography</p>
+                  <p>Venture Capital</p>
                   <a href="#about" className="btn btn-default btn-lg page-scroll">Learn More</a> </div>
               </div>
             </div>
@@ -91,6 +107,8 @@ class App extends Component {
 
                   <li className="hidden"> <a href="#page-top"></a> </li>
                   <li> <a className="page-scroll" href="#about">About</a> </li>
+                  <li> <a className="page-scroll" href="#geo">Geo</a> </li>
+                  <li> <a className="page-scroll" href="#Team">Team</a> </li>
                   <li> <a className="page-scroll" href="#portfolio">Portfolio</a> </li>
                   <li> <a className="page-scroll" href="#contact">Contact</a> </li>
                 </ul>
@@ -98,6 +116,7 @@ class App extends Component {
             </div>
           </nav>
         </div>
+        <div ref={(el) => this.map = el} id="map_canvas" style={{ height: 300 }} />
 
         <div id="about">
           <div className="container">
@@ -117,9 +136,7 @@ class App extends Component {
           </div>
         </div>
 
-        <Portfolio/>
-        <Contact/>
-
+        <Portfolio />
         <div id="contact" className="text-center">
           <div className="container">
             <div className="section-title center">
@@ -127,7 +144,7 @@ class App extends Component {
               <hr />
             </div>
             <div className="col-md-8 col-md-offset-2">
-              <form name="sentMessage" id="contactForm" novalidate>
+              <form name="sentMessage" id="contactForm">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
