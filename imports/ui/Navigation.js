@@ -12,7 +12,6 @@ export default () =>
 
                         <li className="hidden"> <a href="#page-top"></a> </li>
                         <li> <a className="page-scroll" href="#about">About</a> </li>
-                        <li> <a className="page-scroll" href="#geo">Geo</a> </li>
                         <li> <a className="page-scroll" href="#Team">Team</a> </li>
                         <li> <a className="page-scroll" href="#portfolio">Portfolio</a> </li>
                         <li> <a className="page-scroll" href="#contact">Contact</a> </li>

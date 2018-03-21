@@ -9,7 +9,6 @@ import { setTimeout } from 'timers';
 import Header from './Header'
 import Navigation from './Navigation'
 import About from './About'
-import Map from './Map';
 import Team from './Team'
 import Portfolio from './Portfolio';
 import Contact from './Contact'
@@ -75,8 +74,6 @@ class App extends Component {
         <Navigation />
 
         <About />
-
-        <Map />
 
         <Team />
 
