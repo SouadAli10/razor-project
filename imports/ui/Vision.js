@@ -7,13 +7,17 @@ export default () =>
                 <hr />
             </div>
             <div className="row">
-                <div className="col-md-12 text-center"><img src="../img/about.jpg" className="img-responsive" /></div>
-                <div className="col-md-8 col-md-offset-2">
+            
+                
                     <div className="about-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
-                        <a href="#Vision" className="btn btn-default btn-lg page-scroll">Vision</a> </div>
+                        <div><p>Razor aims to be the leading VC firm in emerging markets of South Asia.</p></div>
+                        <div><p>IMPLEMENTING THE VISION</p><br/><p>Razor aims to achieve its vision through implementing stringent oversight and
+industry standard business practices by providing structure, guidance, and
+adequate corporate governance to its portfolio companies while ensuring full
+transparency with its investors.</p></div>
+                        
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+    
