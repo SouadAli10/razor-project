@@ -425,3 +425,16 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #geo{
 	background: #f6f6f6
 }
+#col-gray:hover{
+	background-color: rgba(255,255,255,0.8);
+}
+.allWidth{
+	width: 100%;
+	margin-top: 50px;
+}
+.gray-back{
+	background-color: rgb(199, 199, 199)
+}
+.gray-back:hover{
+	background-color: rgb(199, 199, 199)
+}
