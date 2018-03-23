@@ -422,3 +422,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #footer a:hover {
 	color: #000;
 }
+#geo{
+	background: #f6f6f6
+}
