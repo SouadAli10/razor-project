@@ -177,20 +177,20 @@ header .intro-text {
 	padding-bottom: 200px;
 }
 /* About Section */
-#about {
+#Vision {
 	padding: 120px 0;
 }
-#about .about-text {
+#Vision .about-text {
 	margin-left: 10px;
 	text-align: center;
 }
-#about img {
+#Vision img {
 	border-radius: 50%;
 	width: 160px;
 	height: 160px;
 	display: inline-block;
 }
-#about p {
+#Vision p {
 	margin-top: 40px;
 	margin-bottom: 30px;
 	line-height: 22px;

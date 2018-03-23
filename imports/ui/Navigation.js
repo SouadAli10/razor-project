@@ -11,9 +11,11 @@ export default () =>
                     <ul className="nav navbar-nav"> 
 
                         <li className="hidden"> <a href="#page-top"></a> </li>
-                        <li> <a className="page-scroll" href="#about">About</a> </li>
+                        <li> <a className="page-scroll" href="#Vision">Our Vision</a> </li>
+                        <li> <a className="page-scroll" href="#Why">Why?</a> </li>
                         <li> <a className="page-scroll" href="#Team">Team</a> </li>
                         <li> <a className="page-scroll" href="#portfolio">Portfolio</a> </li>
+                        <li> <a className="page-scroll" href="#Active">Partnerships</a> </li>                     
                         <li> <a className="page-scroll" href="#contact">Contact</a> </li>
                     </ul>
                 </div>

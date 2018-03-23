@@ -481,9 +481,6 @@ th {
 .glyphicon-picture:before {
   content: "\e060";
 }
-.glyphicon-map-marker:before {
-  content: "\e062";
-}
 .glyphicon-adjust:before {
   content: "\e063";
 }
@@ -6578,4 +6575,3 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */

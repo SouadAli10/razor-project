@@ -8,9 +8,11 @@ import { Meteor } from 'meteor/meteor';
 import { setTimeout } from 'timers';
 import Header from './Header'
 import Navigation from './Navigation'
-import About from './About'
+import Vision from './Vision'
+import Why from './Why'
 import Team from './Team'
 import Portfolio from './Portfolio';
+import Active from './Active'
 import Contact from './Contact'
 import Footer from './Footer'
 // App component - represents the whole app
@@ -73,11 +75,15 @@ class App extends Component {
 
         <Navigation />
 
-        <About />
+        <Vision />
+
+        <Why/>
 
         <Team />
 
         <Portfolio />
+
+        <Active />
 
         <Contact />
 
