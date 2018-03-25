@@ -201,6 +201,17 @@ header .intro-text {
 #Vision .about-text .about-1 p{
 	color: white;
 }
+
+/*Why Section */
+.why-text{
+	background-color: rgb(219, 217, 217);
+}
+.why-text p{
+	color: rgb(1, 1, 109);
+}
+/* Team Section */
+ 
+
 /* Portfolio Section */
 #portfolio {
 	padding: 120px 0;
