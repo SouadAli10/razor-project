@@ -210,8 +210,19 @@ header .intro-text {
 	color: rgb(1, 1, 109);
 }
 /* Team Section */
- 
-
+.team {
+	display: block;
+	float: left;
+	width: 40%;
+	height: 45%;
+} 
+.team-portfolio{
+	margin: 15px;
+}
+.team-text .team .team-pics{
+	height: 100px;
+	width: 100px;
+}
 /* Portfolio Section */
 #portfolio {
 	padding: 120px 0;
