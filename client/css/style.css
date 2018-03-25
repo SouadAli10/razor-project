@@ -195,6 +195,12 @@ header .intro-text {
 	margin-bottom: 30px;
 	line-height: 22px;
 }
+#Vision .about-text .about-1{
+	background-color: rgb(6, 6, 65)	
+}
+#Vision .about-text .about-1 p{
+	color: white;
+}
 /* Portfolio Section */
 #portfolio {
 	padding: 120px 0;
