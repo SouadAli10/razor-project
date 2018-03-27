@@ -355,14 +355,18 @@ ol.type li a:hover {
 	display: block;
 	width: 100%;
 	margin-bottom:10px;
+	position:relative;
 }
 .portfolio-img {
-	float: left;
-	width: 50%;
+	position:absolute;
+	top:0;
+	left:0;
+	width:290px;
+	height:100%;
 }
 .discription{
-	float: left;
 	width: 50%;
+	margin-left:290px; /** width of the longest portfolio icon **/
 }
 
 
