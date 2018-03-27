@@ -14,15 +14,15 @@ const items = [
     { src: "Open_Bay_logo.jpg", description: "Start up based out of the east coast, Openbay aims to be the one stop shop for anyone needing solutions to their car problems. Openbay has been consistently meeting KPIs by signing with some of the top insurance companies in the country to ensure an excellent user experience." },
     { src: "Cohesity_logo.jpg", description: "One of the founders’ favourite opportunity. Led by Silicon Valley superstar Mohit Aron, founder of Nutanix a multi billion dollar company, and responsible for organizing Google’s filing system. Mohit left to start Cohesity which aims to hyper converge and drastically reduce costs for secondary storage." },
     {
-        src: "bongo_logo.jpg", 
+        src: "bongo_logo.jpg",
         description: "South Asia’s answer to Netflix, Bongo is an on demand entertainment platform providing localized content to South Asians worldwide. They are scaling throughout Asia with a focus on local content, with plans to expand globally."
     },
     {
-        src: "Artis loga.jpg", 
+        src: "Artis loga.jpg",
         description: "Investments made into a fund managed by Artis Ventures. Artis are a well known San Francisco based VC that have made sizeable exits from companies such as YouTube. Fund has a mandate to invest in exciting and disruptive start ups. Stakes purchased in companies such as Palantir and Modern Meadow. Fund has already made an exit through Stemcentrx."
     },
     {
-        src: "JeteChao_logo.jpg", 
+        src: "JeteChao_logo.jpg",
         description: "Jetechao is a new and up coming start up in Bangladesh that is being modeled after Ticketmaster for Bangladesh and the South Asian market. They aim to bring events to internet users in the simplest and straightforward way possible."
     },
     {
