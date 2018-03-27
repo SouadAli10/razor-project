@@ -22,3 +22,9 @@ accounts-ui
 accounts-password
 meteortesting:mocha
 email
+ostrio:files
+cfs:standard-packages
+cfs:filesystem
+cfs:data-man
+steedos:cfs-data-man
+cfs:gridfs

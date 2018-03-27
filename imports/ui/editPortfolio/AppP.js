@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
 import MyForm from './myform.js';
+
+
 export default class App extends Component {
 
   render() {
