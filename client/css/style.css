@@ -88,6 +88,8 @@ hr {
 }
 .navbar .navbar-collapse {
 	text-align: center;
+	margin-left: -67px;
+    margin-right: -67px;
 }
 .navbar-custom {
 	margin-bottom: 0;
@@ -100,7 +102,7 @@ hr {
 	color: #555;
 }
 .navbar-custom .nav li a {
-	margin: 0 60px;
+	margin: 0 29px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	-webkit-transition: background .3s ease-in-out;
