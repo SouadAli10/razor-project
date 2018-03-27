@@ -364,9 +364,16 @@ ol.type li a:hover {
 	width:290px;
 	height:100%;
 }
-.discription{
-	width: 50%;
-	margin-left:290px; /** width of the longest portfolio icon **/
+
+.portfolio-img img{
+	height:100%;
+	width:auto;
+	float:right;
+	max-height:77px;
+}
+
+.portfolio-description{
+	margin-left:300px; /** width of the longest portfolio icon **/
 }
 
 
