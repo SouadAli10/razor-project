@@ -28,3 +28,4 @@ cfs:filesystem
 cfs:data-man
 steedos:cfs-data-man
 cfs:gridfs
+cunneen:mailgun
