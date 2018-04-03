@@ -22,7 +22,6 @@ export default class ShowPortfolio extends React.Component {
                             <button className='btn btn-default btn-lg' onClick={() => this.props.removePortfolio(this.props.id)}>Delete</button>
                             <button className='btn btn-default btn-lg' onClick={() => this.editButton()}>Edit</button>
                         </div>
-                        {console.log(this.props.photo)}
                         <img className="img-responsive" src={this.props.photo} /> </a> </div>
                 </div>
                 <div className="portfolio-item">

@@ -146,7 +146,6 @@ class AddForm extends Component {
 
 }
 export default withTracker(() => {
-    console.log(Portfolios.find({}).fetch())
     Meteor.subscribe('portfolios')
     return {
         portfolioM: Portfolios.find({}).fetch(),

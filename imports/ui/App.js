@@ -9,7 +9,6 @@ export default () => (
     <div>
       <Route exact path="/" component={Home}/>
       <Route path="/edit" component={Edit}/>
-      <Route path="/login" component={LoginPage}/>
     </div>
   </Router>
 

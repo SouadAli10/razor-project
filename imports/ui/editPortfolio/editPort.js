@@ -23,7 +23,6 @@ export default class ShowEditPortfolio extends React.Component {
     render() {
         return (
             <div>
-                {console.log(this.props.showFromArray[0])}
                 <div >
                     <h2 >Edit Portfolio</h2>
                     <hr />
