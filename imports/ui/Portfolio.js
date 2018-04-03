@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PortfolioItem from './PortfolioItem'
+import { withTracker } from 'meteor/react-meteor-data';
+import { Mongo } from 'meteor/mongo';
+import { Portfolios, Images } from '../api/portfolios.js'
 
 const items = [
     {
@@ -47,19 +50,33 @@ const items = [
     }
 ]
 
-export default () =>
-    <div id="portfolio">
-        <div className="container">
-            <div className="section-title text-center center">
-                <h2>Portfolio</h2>
-                <hr />
-            </div>
-            <div className="row">
-                <div className="portfolio-items">
-                    {items.map(item => <PortfolioItem key={item.src} {...item} />)
-                    }
+class Portfoilio extends Component {
+    render() {
+        return (
+            <div id="portfolio">
+                <div className="container">
+                    <div className="section-title text-center center">
+                        <h2>Portfolio</h2>
+                        <hr />
+                    </div>
+                    <div className="row">
+                        <div className="portfolio-items">
+                            {this.props.portfolioM.map((props) => {
+                                return (
+                                    <PortfolioItem key={props.id} id={props._id} description={props.description} src={props.photo} />
+                                )
+                            })}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        )
+    }
+}
 
+export default withTracker(() => {
+    Meteor.subscribe('portfolios')
+    return {
+        portfolioM: Portfolios.find({}).fetch(),
+    };
+})(Portfoilio);

@@ -92,7 +92,7 @@ class AddForm extends Component {
                     const image = fileObj.name
                     const ext = fileObj.extension
                     const description = this.state.description
-                    const photo = "../portfolioIMG/" + image_id + "." + ext
+                    const photo = image_id + "." + ext
                     Meteor.call("portfolios.add", description, photo)
                     this.setState({
                         description: "",
@@ -127,7 +127,7 @@ class AddForm extends Component {
                 </div>
 
                 <hr className="allWidth" />
-                <div className="col-md-8 col-md-offset-2 gray-back" id="col-gray">
+                <div className="protfolio-main" id="col-gray">
                     <br />
                     {this.showPortEditor()}
                     <hr />

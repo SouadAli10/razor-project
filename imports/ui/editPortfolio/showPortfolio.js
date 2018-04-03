@@ -15,21 +15,14 @@ export default class ShowPortfolio extends React.Component {
     }
     render() {
         return (
-            <div className="col-sm-6 col-md-3 col-lg-3 graphic">
-                <div className="portfolio-item">
-                    <div className="hover-bg"> <a data-lightbox-gallery="gallery1">
-                        <div className="hover-text">
-                            <button className='btn btn-default btn-lg' onClick={() => this.props.removePortfolio(this.props.id)}>Delete</button>
-                            <button className='btn btn-default btn-lg' onClick={() => this.editButton()}>Edit</button>
-                        </div>
-                        <img className="img-responsive" src={this.props.photo} /> </a> </div>
+            <div className="portfolios">
+                <div className="part-1" >
+                    <img className="img-responsive" src={"../portfolioIMG/" + this.props.photo} />
+                    <button className='btn btn-default btn-lg' onClick={() => this.props.removePortfolio(this.props.id)}>Delete</button>
+                    <button className='btn btn-default btn-lg' onClick={() => this.editButton()}>Edit</button>
                 </div>
-                <div className="portfolio-item">
-                    <div className="portfolio-item">
-                        <div className="hover-text">
-                            {this.props.description}
-                        </div>
-                    </div>
+                <div className="part-2" >
+                    {this.props.description}
                 </div>
             </div>
         )

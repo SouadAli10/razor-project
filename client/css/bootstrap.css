@@ -6575,3 +6575,12 @@ button.close {
     display: none !important;
   }
 }
+.protfolio-main{
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 3px solid gray;
+}
+.portfolios{
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
