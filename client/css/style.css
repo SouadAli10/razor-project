@@ -3,8 +3,11 @@ body, html {
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #777;
-	width: 100% !important;
+	width: 93.5% !important;
 	height: 100% !important;
+	margin: auto;
+	font-size: 20px
+	
 }
 h2 {
 	margin: 0 0 20px 0;
@@ -376,8 +379,11 @@ ol.type li a:hover {
 .portfolio-description{
 	margin-left:300px; /** width of the longest portfolio icon **/
 }
-
-
+/* Active */
+#Active{
+	display: block;
+	position: relative;
+}
 /* Contact Section */
 #contact {
 	padding: 120px 0 60px 0;
