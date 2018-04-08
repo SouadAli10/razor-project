@@ -4,8 +4,7 @@ export default () =>
         <div className="intro">
             <div className="container">
                 <div className="row">
-                    <div className="intro-text">
-                        <a href="#about" className="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+                    <div className="intro-text" />
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 body, html {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Brandon Grotesque", sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #777;
@@ -93,13 +93,13 @@ hr {
 }
 .navbar-custom {
 	margin-bottom: 0;
-	background-color: #f6f6f6;
+	background-color:rgb(33, 59, 72) ;
 	border-radius: 0px;
 	padding: 10px 0;
 	border-bottom: 2px solid #fff;
 }
 .navbar-custom a {
-	color: #555;
+	color: #f6f6f6;
 }
 .navbar-custom .nav li a {
 	margin: 0 29px;
@@ -198,7 +198,7 @@ header .intro-text {
 	line-height: 22px;
 }
 #Vision .about-text .about-1{
-	background-color: rgb(6, 6, 65)	
+	background-color: rgb(33, 59, 72) 
 }
 #Vision .about-text .about-1 p{
 	color: white;
@@ -209,7 +209,7 @@ header .intro-text {
 	background-color: rgb(219, 217, 217);
 }
 .why-text p{
-	color: rgb(1, 1, 109);
+	color: rgb(33, 59, 72) ;
 }
 /* Team Section */
 .team {
