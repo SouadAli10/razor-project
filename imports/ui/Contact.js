@@ -26,6 +26,12 @@ export default () =>
                         <textarea name="message" id="message" className="form-control" rows="4" placeholder="Message" required />
                         <p className="help-block text-danger"></p>
                     </div>
+                    <div className="col-md-6">
+                            <div className="form-group">
+                                <input type="file" id="upload" className="form-control" placeholder="Upload"  />
+                                <p className="help-block text-danger"></p>
+                            </div>
+                        </div>
                     <div id="success"></div>
                     <button type="submit" className="btn btn-default btn-lg">Send Message</button>
                 </form>
