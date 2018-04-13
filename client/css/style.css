@@ -9,6 +9,15 @@ body, html {
 	font-size: 20px
 	
 }
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: local('Brandon Grotesque Regular'), local('BrandonGrotesque-Regular'),
+        url('../fonts/brandon-grotesque/hinted-subset-BrandonGrotesque-Regular.woff2') format('woff2'),
+        url('../fonts/brandon-grotesque/hinted-subset-BrandonGrotesque-Regular.woff') format('woff'),
+        url('../fonts/brandon-grotesque/hinted-subset-BrandonGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 h2 {
 	margin: 0 0 20px 0;
 	color: #555;
