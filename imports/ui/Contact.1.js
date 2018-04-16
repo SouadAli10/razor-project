@@ -13,32 +13,18 @@ onSubmit = (evt) => {
     evt.preventDefault()
     const form = evt.target
     const name = form.name.value
-    const email = form.email.value
+    const from = form.email.value
     const message = form.message.value
     const file = form.file.files[0]
-    const mail = {
-        to: "",
-        subject: '',
-        attachments: file,
-        html: `
-        <h1> This is a message from your website 'RAZOR'</h1>
-        <hr>
-        <strong>from: </strong> `+ name + `<br>
-        <strong>email: </strong> `+ email + `<br>
-        <strong>message: </strong><br> `+ `<h2>` + message + `</h2>` + `
-        `
-    }
 
-    console.log(file.name)
     if (!file) {
-        Meteor.call('sendEmail', mail);
+        Meteor.call('sendEmail',  from, message);
         this.afterSubmit("thank you! We will get back in touch soon")
         return;
     }
 
     const size = file.size
     const type = file.type.slice('/')[0];
-    const path = file.path
 
     // if (type !== 'image') {
     //     this.afterSubmit(file.name + " is not an image", true)
@@ -52,13 +38,10 @@ onSubmit = (evt) => {
     }
 
     const reader = new FileReader();
-    console.log(reader)
 
     reader.onload = (event) => {
         const contents = event.target.result
-        console.log(event.target.result)
-        const fileName = file.name
-        Meteor.call('sendEmail', mail, fileName, contents);
+        Meteor.call('sendEmail', name, email, message, file.name, contents);
         this.afterSubmit("thank you! We will get back in touch soon")
     }
     reader.onerror = (error) => {
@@ -66,7 +49,7 @@ onSubmit = (evt) => {
         this.afterSubmit("Sorry, there was an error: " + error.message, true)
     }
 
-    reader.readAsDataURL(file)
+    reader.readAsArrayBuffer(file)
 }
 
 export default () => (
