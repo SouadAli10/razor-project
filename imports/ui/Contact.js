@@ -66,15 +66,9 @@ export default class Contact extends Component {
         const size = file.size
         const type = file.type.slice('/')[0];
         const path = file.path
-
-        // if (type !== 'image') {
-        //     this.afterSubmit(file.name + " is not an image", true)
-        //     return
-        // }
-
         const maxSize = 3
         if (size > (maxSize * 1000000)) {
-            this.afterSubmit(file.name + " is too large, " + maxSize + "Mb max plz", true)
+            this.onLoadState("sizeError", file.name + " is too large, " + maxSize + "Mb max plz");
             return
         }
 
@@ -98,10 +92,12 @@ export default class Contact extends Component {
         } else if (this.state.nowState == "onLoad") {
             return messageNow("circle notched", true, "Uploading", "Your attachment getting uploaded soon")
         } else if (this.state.nowState == "error") {
-            return messageNow("dont", false, "ERROR", "Sorry, there was an error: " + errorMessage)
+            return messageNow("dont", false, "ERROR", "Sorry, there was an error: " + this.state.errorMessage)
         } else if (this.state.nowState == "endLoad") {
             document.getElementById("contactForm").reset();
             return messageNow("check", false, "Your Message was sent", "thank you! We will get back in touch soon.")
+        } else if (this.state.nowState == "sizeError") {
+            return messageNow("check", false, "Large file", this.state.errorMessage)
         }
     }
     onLoadState = (show, err) => {
