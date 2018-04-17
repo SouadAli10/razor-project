@@ -2,7 +2,7 @@ body, html {
 	font-family: "Brandon Grotesque", sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	color: #777;
+	color: gray;
 	width: 93.5% !important;
 	height: 100% !important;
 	margin: auto;
@@ -25,17 +25,20 @@ h2 {
 	letter-spacing: 1px;
 	font-weight: 400;
 	font-size: 30px;
+	font-family: 'Brandon Grotesque'
 }
 h3, h4 {
 	color: #222;
 	font-size: 18px;
 	font-weight: 300;
 	letter-spacing: 1px;
+	font-family: 'Brandon Grotesque'
 }
 h5 {
 	text-transform: uppercase;
 	font-weight: 700;
 	line-height: 20px;
+	font-family: 'Brandon Grotesque'
 }
 p.intro {
 	font-size: 16px;
@@ -79,7 +82,7 @@ hr {
 	width: 70px;
 	text-align: center;
 	position: relative;
-	background: #666;
+	background: rgb(167, 107,87);
 	margin: 0 auto;
 	margin-bottom: 30px;
 	border: 0;
@@ -149,7 +152,9 @@ hr {
 	margin: 0;
 	font-size: 16px;
 	border-radius: 0;
-	margin-top: 20px;
+	margin-top: 22px;
+    margin-left: 29%;
+    margin-right: 30%;
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
 	color: #fff;
@@ -210,13 +215,25 @@ header .intro-text {
 	line-height: 22px;
 }
 #Vision .about-text .about-1{
-	background-color: rgb(33, 59, 72) 
+	background-color: rgb(33, 59, 72);
+	display: block;
+    height: 45px; 
 }
 #Vision .about-text .about-1 p{
 	color: white;
+	padding-top: 8px;
 }
-
+#Vision .about-text .about-2{
+	color: rgb(33, 59, 72);
+}
+#Vision .about-text .about-2 p .Title{
+	font-weight: bold;
+}
 /*Why Section */
+#Why .container{
+	padding-bottom: 90px;
+    padding-top: 30px;
+}
 .why-text{
 	background-color: rgb(219, 217, 217);
 }
@@ -227,78 +244,37 @@ header .intro-text {
 .team {
 	display: block;
 	float: left;
-	width: 40%;
+	width: 35%;
 	height: 45%;
+	color: rgb(33, 59, 72);
 } 
+.team .postion-name .position{
+	color: rgb(167, 107,87);
+}
 .team-portfolio{
-	margin: 15px;
+    margin: 39px;
+	padding-left: 20px;
+	position: relative
 }
 .team-text .team .team-pics{
-	height: 100px;
-	width: 100px;
+	height: 150px;
+	width: 150px;
+	float: left;
+}
+.team .position-info{
+	display: block;
+	float: left;
+}
+.team .team-info{
+	display: block;
+    float: left;
+    width: 100%;
 }
 /* Portfolio Section */
 #portfolio {
 	padding: 120px 0;
-	background: #f6f6f6;
+	background: white;
 }
-/* .categories {
-	padding-bottom: 30px;
-	text-align: center;
-}
-ul.cat li {
-	display: inline-block;
-}
-ol.type li {
-	display: inline-block;
-	margin-left: 20px;
-}
-ol.type li a {
-	border: 1px solid #777;
-	color: #555;
-	padding: 8px 20px;
-}
-ol.type li a.active {
-	background: #222;
-	border: 1px solid #222;
-	color: #fff;
-}
-ol.type li a:hover {
-	background: #222;
-	border: 1px solid #222;
-	color: #fff;
-}
-.isotope-item {
-	z-index: 2
-}
-.isotope-hidden.isotope-item {
-	z-index: 1
-}
-.isotope, .isotope .isotope-item {
-	/* change duration value to whatever you like */
-	/* -webkit-transition-duration: 0.8s;
-	-moz-transition-duration: 0.8s;
-	transition-duration: 0.8s;
-}
-.isotope-item {
-	margin-right: -1px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-.isotope {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transition-property: height, width;
-	-moz-transition-property: height, width;
-	transition-property: height, width;
-}
-.isotope .isotope-item {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transition-property: -webkit-transform, opacity;
-	-moz-transition-property: -moz-transform, opacity;
-	transition-property: transform, opacity;
-} */ 
 .portfolio-item {
 	margin: 15px 0;
 	-webkit-transition: all 0.5s ease-out;
@@ -307,64 +283,6 @@ ol.type li a:hover {
 	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
 }
-/* .portfolio-item:hover {
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	transform: scale(1.1);
-}
-.portfolio-item .hover-bg {
-	height: 195px;
-	overflow: hidden;
-	position: relative;
-}
-.hover-bg .hover-text {
-	position: absolute;
-	text-align: center;
-	margin: 0 auto;
-	color: #ffffff;
-	background: rgba(0, 0, 0, 0.66);
-	padding: 30% 0 0 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: all 0.5s;
-}
-.hover-bg .hover-text>h4 {
-	text-transform: uppercase;
-	opacity: 0;
-	color: #fff;
-	-webkit-transform: translateY(100%);
-	transform: translateY(100%);
-	transition: all 0.3s;
-}
-.hover-bg:hover .hover-text>h4 {
-	opacity: 1;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
-.hover-bg .hover-text>i {
-	opacity: 0;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-	transition: all 0.3s;
-}
-.hover-bg:hover .hover-text>i {
-	opacity: 1;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translateY(100%);
-	transform: translateY(100%);
-}
-.hover-bg:hover .hover-text {
-	opacity: 1;
-}
-#portfolio i.fa {
-	font-size: 20px;
-	padding: 5px;
-	color: #E87E04;
-} */
 .portfolio-item{
 	display: block;
 	width: 100%;
@@ -393,6 +311,10 @@ ol.type li a:hover {
 	display: block;
 	position: relative;
 }
+#Active .container .img-responsive {
+	width: 208px;
+	margin-left: 40%;	
+}
 /* Contact Section */
 #contact {
 	padding: 120px 0 60px 0;
@@ -402,6 +324,7 @@ ol.type li a:hover {
 	font-size: 20px;
 	font-weight: 400;
 	color: #fff;
+	font-family: 'Brandon Grotesque'
 }
 #contact form {
 	padding: 30px 0;
@@ -432,6 +355,11 @@ label {
 	-webkit-transition: none;
 	-o-transition: none;
 	transition: none;
+	font-family: 'Brandon Grotesque'
+}
+#contact input #upload .form-control{
+	display: block;
+    margin-left: 54%;
 }
 #contact .form-control:focus {
 	border-color: inherit;

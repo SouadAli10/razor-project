@@ -11,7 +11,8 @@ export default () =>
                     <p>Razor aims to be the leading VC firm in emerging markets of South Asia.</p>
                 </div>
                 <div className="about-2">
-                    <p>IMPLEMENTING THE VISION</p>
+                    <p className= "Title">IMPLEMENTING THE VISION</p>
+                    <hr />
                     <p>Razor aims to achieve its vision through implementing stringent oversight and
 industry standard business practices by providing structure, guidance, and
 adequate corporate governance to its portfolio companies while ensuring full
