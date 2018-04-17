@@ -142,6 +142,31 @@ export default class Contact extends Component {
                                 <textarea name="message" id="message" name="message" className="form-control" rows="4" placeholder="Message" required />
                                 <p className="help-block text-danger"></p>
                             </div>
+<<<<<<< HEAD
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <textarea name="message" id="message" className="form-control" rows="4" placeholder="Message" required />
+                        <p className="help-block text-danger"></p>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="form-group">
+                            <input type="file" id="upload" className="form-control" placeholder="Upload" />
+                            <p className="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="success"></div>
+                    <button type="submit" className="btn btn-default btn-lg">Send Message</button>
+                </form>
+                <div className="social">
+                    <ul>
+                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i className="fa fa-behance"></i></a></li>
+                    </ul>
+=======
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <input type="file" id="upload" name="file" className="form-control" placeholder="Upload" />
@@ -153,6 +178,7 @@ export default class Contact extends Component {
                             {this.showNow()}
                         </form>
                     </div>
+>>>>>>> 7a0c546351ec838e8757d6642eb42b35e06e0fb3
                 </div>
             </div>
         )
