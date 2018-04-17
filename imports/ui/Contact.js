@@ -100,6 +100,7 @@ export default class Contact extends Component {
         } else if (this.state.nowState == "error") {
             return messageNow("dont", false, "ERROR", "Sorry, there was an error: " + errorMessage)
         } else if (this.state.nowState == "endLoad") {
+            document.getElementById("contactForm").reset();
             return messageNow("check", false, "Your Message was sent", "thank you! We will get back in touch soon.")
         }
     }
