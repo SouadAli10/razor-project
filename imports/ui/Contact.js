@@ -66,9 +66,15 @@ export default class Contact extends Component {
         const size = file.size
         const type = file.type.slice('/')[0];
         const path = file.path
+
+        // if (type !== 'image') {
+        //     this.afterSubmit(file.name + " is not an image", true)
+        //     return
+        // }
+
         const maxSize = 3
         if (size > (maxSize * 1000000)) {
-            this.onLoadState("sizeError", file.name + " is too large, " + maxSize + "Mb max plz");
+            this.afterSubmit(file.name + " is too large, " + maxSize + "Mb max plz", true)
             return
         }
 
@@ -92,12 +98,10 @@ export default class Contact extends Component {
         } else if (this.state.nowState == "onLoad") {
             return messageNow("circle notched", true, "Uploading", "Your attachment getting uploaded soon")
         } else if (this.state.nowState == "error") {
-            return messageNow("dont", false, "ERROR", "Sorry, there was an error: " + this.state.errorMessage)
+            return messageNow("dont", false, "ERROR", "Sorry, there was an error: " + errorMessage)
         } else if (this.state.nowState == "endLoad") {
             document.getElementById("contactForm").reset();
             return messageNow("check", false, "Your Message was sent", "thank you! We will get back in touch soon.")
-        } else if (this.state.nowState == "sizeError") {
-            return messageNow("check", false, "Large file", this.state.errorMessage)
         }
     }
     onLoadState = (show, err) => {
@@ -142,31 +146,6 @@ export default class Contact extends Component {
                                 <textarea name="message" id="message" name="message" className="form-control" rows="4" placeholder="Message" required />
                                 <p className="help-block text-danger"></p>
                             </div>
-<<<<<<< HEAD
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <textarea name="message" id="message" className="form-control" rows="4" placeholder="Message" required />
-                        <p className="help-block text-danger"></p>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="form-group">
-                            <input type="file" id="upload" className="form-control" placeholder="Upload" />
-                            <p className="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <br />
-                    <div id="success"></div>
-                    <button type="submit" className="btn btn-default btn-lg">Send Message</button>
-                </form>
-                <div className="social">
-                    <ul>
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
-                        <li><a href="#"><i className="fa fa-behance"></i></a></li>
-                    </ul>
-=======
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <input type="file" id="upload" name="file" className="form-control" placeholder="Upload" />
@@ -178,11 +157,9 @@ export default class Contact extends Component {
                             {this.showNow()}
                         </form>
                     </div>
->>>>>>> 7a0c546351ec838e8757d6642eb42b35e06e0fb3
                 </div>
             </div>
         )
     }
 
 }
-
