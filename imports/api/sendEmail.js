@@ -3,10 +3,9 @@ import { Email } from 'meteor/email';
 import { check } from 'meteor/check'
 
 Meteor.methods({
-    'sendEmail'(props, fileName, contents) {
+    'sendEmail'(props, fileName, contents, endUpload) {
         props.to = 'fadimoubassaleh@gmail.com'
         props.subject = 'contact mail from the website on ' + (new Date()).toString()
-        console.log(props)
         const attachments = []
 
         if (contents) { 
@@ -20,6 +19,7 @@ Meteor.methods({
             attachments: attachments,
             html: props.html
         })
+        endUpload;
         console.log('mail sent')
     }
 })

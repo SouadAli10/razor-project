@@ -50,6 +50,7 @@ ecmascript-runtime-server@0.5.0
 ejson@1.1.0
 email@1.2.3
 es5-shim@4.7.0
+flemay:less-autoprefixer@1.2.0
 geojson-utils@1.0.10
 hot-code-push@1.0.4
 html-tools@1.0.11
@@ -94,6 +95,8 @@ reactive-var@1.0.11
 reload@1.2.0
 retry@1.1.0
 routepolicy@1.0.12
+semantic:ui@2.3.1
+semantic:ui-data@2.3.1
 server-render@0.3.0
 service-configuration@1.0.11
 session@1.1.7
