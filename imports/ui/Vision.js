@@ -13,7 +13,7 @@ export default () =>
                 <div className="about-2">
                     <p className= "Title">IMPLEMENTING THE VISION</p>
                     <hr />
-                    <p>Razor aims to achieve its vision through implementing stringent oversight and
+                    <p className= "about-2-text">Razor aims to achieve its vision through implementing stringent oversight and
 industry standard business practices by providing structure, guidance, and
 adequate corporate governance to its portfolio companies while ensuring full
 transparency with its investors.</p></div>
