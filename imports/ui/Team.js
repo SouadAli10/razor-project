@@ -39,11 +39,9 @@ export default () =>
                 <h2>Meet Our Team</h2>
                 <hr />
             </div>
-            <div className="row">
-                <div className="team-text team-portfolio">
-                    {members.map(members => <TeamItem key={members.pic_name} {...members} />)
-                    }
-                </div>
+            <div className="row row-team">
+                {members.map(members => <TeamItem key={members.pic_name} {...members} />)
+                }
             </div>
         </div>
     </div>

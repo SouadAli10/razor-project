@@ -3,10 +3,8 @@ import React from 'react';
 const TeamItem = ({ pic_name, Name, Position, Bio }) =>
 
     <div className="team team-portfolio">
-        <div >
-            <img src={"../img/" + pic_name} className="team-pics" />
-        </div>
-        <div className= "position-info">
+        <img src={"../img/" + pic_name} className="team-pics" />
+        <div className="position-info">
             <div className="postion-name">
                 <p >{Name}</p>
                 <p className="position">{Position}</p>

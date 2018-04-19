@@ -246,16 +246,50 @@ header .intro-text {
 	color: rgb(33, 59, 72) ;
 }
 /* Team Section */
+/* @media (max-width: 1000px){
+	.row-team{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 1fr 1fr;
+		grid-gap: 20px;
+	}
+	.row-team::before{
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	
+} */
+.row-team{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto 1fr 1fr;
+	grid-gap: 20px;
+}
+.row-team::before{
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+.team img{
+	height: 250px;
+	width: 180px;
+}
+.team{
+	grid-column: span 2;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-column-gap: 20px;
+	color: rgb(33, 59, 72);
+}
+.team .postion-name .position{
+	color: rgb(167, 107,87);
+}
+/*
 .team {
 	display: block;
 	float: left;
 	width: 35%;
 	height: 45%;
-	color: rgb(33, 59, 72);
 } 
-.team .postion-name .position{
-	color: rgb(167, 107,87);
-}
 .team-portfolio{
     margin: 39px;
 	padding-left: 20px;
@@ -274,7 +308,7 @@ header .intro-text {
 	display: block;
     float: left;
     width: 100%;
-}
+} */
 /* Portfolio Section */
 #portfolio {
 	padding: 120px 0;
