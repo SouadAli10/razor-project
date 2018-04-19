@@ -14,61 +14,52 @@ class SidebarLeftOverlay extends Component {
     state = { visible: false }
 
     toggleVisibility = () => this.setState({ visible: !this.state.visible })
+    toggleVisibilityFalse = () => this.setState({ visible: false })
 
     render() {
         const { visible } = this.state
         return (
             <div>
-                <Button onClick={this.toggleVisibility}>Menu</Button>
+                <Button onClick={this.toggleVisibility} className="menuButton" ><Icon name='content' /></Button>
                 <Sidebar.Pushable as={Segment}>
                     <Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
-                        <Menu.Item name='OUR VISION'>
-                            <Icon name='OUR VISION' />
-                            OUR VISION
-
+                        <Menu.Item name='unhide'>
+                            <a className="page-scroll" href="#Vision" onClick={this.toggleVisibilityFalse}><Icon name='unhide' /><br />Our Vision</a>
                         </Menu.Item>
-                        <Menu.Item name='WHY!'>
-                            <Icon name='WHY!' />
-                            WHY!
-
+                        <Menu.Item name='help!'>
+                            <a className="page-scroll" href="#Why" onClick={this.toggleVisibilityFalse}><Icon name='help' /><br />Why?</a>
                         </Menu.Item>
-                        <Menu.Item name='TEAM'>
-                            <Icon name='TEAM' />
-                            TEAM
-
+                        <Menu.Item name='users'>
+                            <a className="page-scroll" href="#Team" onClick={this.toggleVisibilityFalse}><Icon name='users' /><br />Team</a>
                         </Menu.Item>
-                        <Menu.Item name='PORTFOLIO'>
-                            <Icon name='PORTFOLIO' />
-                            PORTFOLIO
-
+                        <Menu.Item name='road'>
+                            <a className="page-scroll" href="#portfolio" onClick={this.toggleVisibilityFalse}><Icon name='road' /><br />Portfolio</a>
                         </Menu.Item>
-                        <Menu.Item name='PARTNERSHIPS'>
-                            <Icon name='PARTNERSHIPS' />
-                            PARTNERSHIPS
-
+                        <Menu.Item name='sitemap'>
+                            <a className="page-scroll" href="#Active" onClick={this.toggleVisibilityFalse}><Icon name='sitemap' /><br />Partnerships</a>
                         </Menu.Item>
-                        <Menu.Item name='CONTACT'>
+                        <Menu.Item name='comments'>
+                            <a className="page-scroll" href="#contact" onClick={this.toggleVisibilityFalse}><Icon name='comments' /><br />Contact</a>
                         </Menu.Item>
                     </Sidebar>
                     <Sidebar.Pusher>
-                        <Segment basic>
-                                <Header />
-                        
-                                <Vision />
-                        
-                                <Why/>
-                        
-                                <Team />
-                        
-                                <Portfolio />
-                        
-                                <Active />
-                        
-                                <Contact />
-                        
-                                <Footer />
-                        
-                        </Segment>
+                        <div className='HtmlContainer' onClick={this.toggleVisibilityFalse} >
+                            <Header />
+
+                            <Vision />
+
+                            <Why />
+
+                            <Team />
+
+                            <Portfolio />
+
+                            <Active />
+
+                            <Contact />
+
+                            <Footer />
+                        </div>
                     </Sidebar.Pusher>
                 </Sidebar.Pushable>
 

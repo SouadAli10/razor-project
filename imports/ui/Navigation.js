@@ -9,7 +9,6 @@ export default () =>
 
                 <div className="collapse navbar-collapse navbar-main-collapse">
                     <ul className="nav navbar-nav"> 
-
                         <li className="hidden"> <a href="#page-top"></a> </li>
                         <li> <a className="page-scroll" href="#Vision">Our Vision</a> </li>
                         <li> <a className="page-scroll" href="#Why">Why?</a> </li>

@@ -23,7 +23,7 @@ class App extends Component {
 
     this.state = {
       hideCompleted: false,
-      width: '1000px'
+      width: $(window).width()
     };
   }
 
