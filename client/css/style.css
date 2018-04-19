@@ -271,10 +271,10 @@ header .intro-text {
 	background-color: lightgrey;
 }
 /* Team Section */
-/* @media (max-width: 1000px){
+@media only screen and (min-width: 1000px){
 	.row-team{
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr ;
 		grid-template-rows: auto 1fr 1fr;
 		grid-gap: 20px;
 	}
@@ -283,7 +283,7 @@ header .intro-text {
 		grid-column-end: 3;
 	}
 	
-} */
+}
 .row-team{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
