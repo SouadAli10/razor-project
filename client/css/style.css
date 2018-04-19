@@ -385,6 +385,11 @@ header .intro-text {
 }
 #Active .container .ActivePartnerships{
 	color: rgb(33, 59, 72);
+	display: block;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
 }
 /* Contact Section */
 #contact {
