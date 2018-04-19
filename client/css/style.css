@@ -82,10 +82,12 @@ hr {
 	width: 70px;
 	text-align: center;
 	position: relative;
-	background: rgb(167, 107,87);
+	background: transparent;
 	margin: 0 auto;
 	margin-bottom: 30px;
-	border: 0;
+	border: 1px;
+	border-bottom: 3px dotted rgb(167, 107,87);
+
 }
 /* Navigation */
 #nav {
@@ -218,6 +220,8 @@ header .intro-text {
 	margin-top: 40px;
 	margin-bottom: 30px;
 	line-height: 22px;
+	padding-top: 20px;	
+
 }
 #Vision .about-text .about-1{
 	background-color: rgb(33, 59, 72);
@@ -226,13 +230,24 @@ header .intro-text {
 }
 #Vision .about-text .about-1 p{
 	color: white;
-	padding-top: 8px;
+	padding-top: 2px;
 }
 #Vision .about-text .about-2{
 	color: rgb(33, 59, 72);
+	background-color: lightgray;
+	padding-bottom: 10px;
+	
 }
 #Vision .about-text .about-2 p .Title{
 	font-weight: bold;
+}
+.about-2-text{
+	padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+	padding-bottom: 20px;
+	text-align: justify;
+	text-indent: 10px;
 }
 /*Why Section */
 #Why .container{
@@ -241,9 +256,19 @@ header .intro-text {
 }
 .why-text{
 	background-color: rgb(219, 217, 217);
+	max-width: 1130px;
+    align-content: center;
+    margin-left: 20px;
 }
 .why-text p{
 	color: rgb(33, 59, 72) ;
+	padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-indent: 25px;
+	text-align: justify;
+	background-color: lightgrey;
 }
 /* Team Section */
 /* @media (max-width: 1000px){
@@ -352,7 +377,14 @@ header .intro-text {
 }
 #Active .container .img-responsive {
 	width: 208px;
-	margin-left: 40%;	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;	
+	margin-bottom: 35px;
+}
+#Active .container .ActivePartnerships{
+	color: rgb(33, 59, 72);
 }
 /* Contact Section */
 #contact {
