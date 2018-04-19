@@ -15,6 +15,7 @@ import Portfolio from './Portfolio';
 import Active from './Active'
 import Contact from './Contact'
 import Footer from './Footer'
+import Menusimentic from './menusimentic'
 // App component - represents the whole app
 class App extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class App extends Component {
 
     this.state = {
       hideCompleted: false,
+      width: '1000px'
     };
   }
 
@@ -66,18 +68,35 @@ class App extends Component {
     });
   }
 
-  render() {
+  changeWidth = () =>{
+    this.setState({
+      width: $(window).width()
+    })
+  }
 
+  whatWidth = () =>{
+    window.addEventListener("resize", this.changeWidth)
+  }
+
+  phoneWidth = () =>{
+    if(this.state.width>=768 ){
+      return(this.fullWidthRender())
+    }  
+    else {
+      return(<Menusimentic />)
+    }
+  }
+  fullWidthRender = () => {
     return (
-
-      <div className="my-site-wrapper">
+      <div>
+        {console.log('I am alive')}
         <Header />
 
         <Navigation />
 
         <Vision />
 
-        <Why/>
+        <Why />
 
         <Team />
 
@@ -88,7 +107,18 @@ class App extends Component {
         <Contact />
 
         <Footer />
+      </div>
+    )
+  }
 
+  render() {
+
+    return (
+
+      <div className="my-site-wrapper">
+        {this.whatWidth()}
+        {console.log(this.state.width)}
+        {this.phoneWidth()}
       </div>
     );
   }
