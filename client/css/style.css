@@ -338,6 +338,8 @@ header .intro-text {
 #portfolio {
 	padding: 120px 0;
 	background: white;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 .portfolio-item {
 	margin: 15px 0;
@@ -369,6 +371,7 @@ header .intro-text {
 
 .portfolio-description{
 	margin-left:300px; /** width of the longest portfolio icon **/
+	color:rgb(33, 59, 72);
 }
 /* Active */
 #Active{
