@@ -23,7 +23,7 @@ class App extends Component {
 
     this.state = {
       hideCompleted: false,
-      width: '1000px'
+      width: $(window).width()
     };
   }
 
@@ -68,28 +68,27 @@ class App extends Component {
     });
   }
 
-  changeWidth = () =>{
+  changeWidth = () => {
     this.setState({
       width: $(window).width()
     })
   }
 
-  whatWidth = () =>{
+  whatWidth = () => {
     window.addEventListener("resize", this.changeWidth)
   }
 
-  phoneWidth = () =>{
-    if(this.state.width>=768 ){
-      return(this.fullWidthRender())
-    }  
+  phoneWidth = () => {
+    if (this.state.width < 768) {
+      return (<Menusimentic />)
+    }
     else {
-      return(<Menusimentic />)
+      return (this.fullWidthRender())
     }
   }
   fullWidthRender = () => {
     return (
       <div>
-        {console.log('I am alive')}
         <Header />
 
         <Navigation />

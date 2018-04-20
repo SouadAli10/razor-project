@@ -271,10 +271,10 @@ header .intro-text {
 	background-color: lightgrey;
 }
 /* Team Section */
-/* @media (max-width: 1000px){
+@media only screen and (min-width: 1000px){
 	.row-team{
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr ;
 		grid-template-rows: auto 1fr 1fr;
 		grid-gap: 20px;
 	}
@@ -283,7 +283,7 @@ header .intro-text {
 		grid-column-end: 3;
 	}
 	
-} */
+}
 .row-team{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -514,4 +514,29 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .gray-back:hover{
 	background-color: rgb(199, 199, 199)
+}
+.HtmlContainer{
+	height: 100%;
+	width: 100%;
+}
+.menuButton{
+	position: fixed;
+	z-index: 999;
+	bottom: 3.5px;
+	right: 0;
+	margin: 3.5px;
+}
+.ui.segment.pushable{
+	margin: 0;
+}
+.content.icon{
+	margin: 0!important
+}
+.ui.sidebar{
+	height: auto!important;
+	position: fixed;
+	top: 0
+}
+.item{
+	/* z-index: 999; */
 }
