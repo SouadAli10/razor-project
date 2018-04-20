@@ -271,19 +271,6 @@ header .intro-text {
 	background-color: lightgrey;
 }
 /* Team Section */
-@media only screen and (min-width: 1000px){
-	.row-team{
-		display: grid;
-		grid-template-columns: 1fr ;
-		grid-template-rows: auto 1fr 1fr;
-		grid-gap: 20px;
-	}
-	.row-team::before{
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-	
-}
 .row-team{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -307,6 +294,19 @@ header .intro-text {
 }
 .team .postion-name .position{
 	color: rgb(167, 107,87);
+}
+@media(max-width: 700px){
+	.row-team{
+		display: grid;
+		grid-template-columns: 1fr ;
+		grid-template-rows: auto 1fr 1fr;
+		grid-gap: 20px;
+	}
+	.row-team::before{
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	
 }
 /*
 .team {
@@ -338,41 +338,69 @@ header .intro-text {
 #portfolio {
 	padding: 120px 0;
 	background: white;
-	margin-left: 10%;
-	margin-right: 10%;
+
+}
+.portfolio-items{
+	padding: 0 20px;
 }
 .portfolio-item {
 	margin: 15px 0;
-	-webkit-transition: all 0.5s ease-out;
+	/* -webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;
 	-ms-transition: all 0.5s ease-out;
 	-o-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
-}
-.portfolio-item{
-	display: block;
+	transition: all 0.5s ease-out; */
+	display: flex;
 	width: 100%;
 	margin-bottom:10px;
-	position:relative;
 }
 .portfolio-img {
-	position:absolute;
-	top:0;
-	left:0;
 	width:290px;
 	height:100%;
 }
-
 .portfolio-img img{
 	height:100%;
-	width:auto;
-	float:right;
+	width:100%;
 }
-
-.portfolio-description{
-	margin-left:300px; /** width of the longest portfolio icon **/
+.portfolio-description{ /** width of the longest portfolio icon **/
+	margin-left: 10px;
 	color:rgb(33, 59, 72);
 }
+
+@media(max-width: 700px){
+	.portfolio-item{
+		display: block;
+	}
+	.portfolio-img{
+		width: 100%;
+	}
+	.portfolio-description{
+		width: 100%;
+	}
+}
+
+/* @media only screen and (min-width: 1000px){
+	.portfolio-item{
+		display: block;
+		width: 100%;
+		margin-bottom:10px;
+		position:relative;
+	}
+	.portfolio-img {
+		position: relative;
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+	
+	.portfolio-img img{
+		position: relative;
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+	
+} */
 /* Active */
 #Active{
 	display: block;
@@ -393,6 +421,9 @@ header .intro-text {
 	margin-left: auto;
 	margin-right: auto;
 
+}
+#Active .container .ActivePartnerships p{
+	margin-left: -100px;
 }
 /* Contact Section */
 #contact {
