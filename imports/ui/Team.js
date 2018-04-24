@@ -4,7 +4,7 @@ const members = [
     {
         pic_name: "Ossama.jpg",
         Name: "OUSSAMA GLILAH",
-        Position: "MANAGING PARTNER",
+        Position: "PARTNER",
         Bio: " Born in the UAE, educated in Beirut and London, and has gone on to work in a variety of industries such as steel manufacturing, insurance, and oil and gas. Moreover Oussama is a serial tech investor in Silicon Valley and frontier market opportunities."
     },
     {
@@ -28,7 +28,7 @@ const members = [
     {
         pic_name: "Afshin_Picture.jpg",
         Name: "AFSHIN MOAYED",
-        Position: "PARTNER",
+        Position: "VENTURE PARTNER",
         Bio: "Afshin Moayed graduated from City University of London. He co-founded an end to end recruitment startup and successfully sold it in 2017. An entrepreneur at heart, Afshin focuses on fintech and blockchain enabled ventures whilst advising founders on product and strategy. Afshin is dedicated to socio economic causes and is a committee advisor to Unity Foundation, an NGO focused on empowering communities through education."
     }
 ]
