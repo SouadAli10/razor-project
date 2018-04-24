@@ -321,14 +321,16 @@ header .intro-text {
 	padding: 0 20px;
 }
 .portfolio-item {
-	margin: 15px 0;
+	margin: 20px 0;
 	display: flex;
 	width: 100%;
 	margin-bottom:10px;
+	border-bottom: 2px dotted black;
 }
 .portfolio-img {
 	width:290px;
 	height:100%;
+	margin-left: 10px;
 }
 .portfolio-img img{
 	height:100%;
@@ -338,6 +340,7 @@ header .intro-text {
 	margin-left: 10px;
 	color:rgb(33, 59, 72);
 	align-self: center;
+	margin-right: 10px;
 }
 
 @media(max-width: 700px){
@@ -361,8 +364,12 @@ header .intro-text {
 	display: flex;
 	color: rgb(33, 59, 72);
 }
-#Active .ActivePartnerships p{
-	background-color: lightgray;
+#Active .Active_img{
+	border-right: 2px solid rgb(167, 107,87);
+}
+#Active .ActivePartnerships{
+	display: block;
+	margin-right: 20px;
 }
 /* Contact Section */
 #contact {

@@ -8,7 +8,7 @@ export default () =>
             </div>
             <div className="row">
                 <div className="ActivePartners">
-                    <div>
+                    <div className ="Active_img">
                         <img src="../img/RNW Logo.png" className="img-responsive" />
                     </div>
                     <div>
