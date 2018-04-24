@@ -4,7 +4,7 @@ import { Meteor } from 'meteor/meteor';
 
 export const Portfolios = new Mongo.Collection('portfolios');
 export const Images = new FilesCollection({
-    storagePath: '../../../../../public/portfolioIMG',
+    storagePath: 'ImagesData',
     collectionName: 'Images',
     allowClientCode: false, // Disallow remove files from Client
     onBeforeUpload(file) {

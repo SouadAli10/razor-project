@@ -61,9 +61,9 @@ class Portfoilio extends Component {
                     </div>
                     <div className="row">
                         <div className="portfolio-items">
-                            {this.props.portfolioM.map((props) => {
+                            {this.props.portfolioM.map((props, key) => {
                                 return (
-                                    <PortfolioItem key={props.id} id={props._id} description={props.description} src={props.photo} />
+                                    <PortfolioItem key={props.id||key} id={props._id} description={props.description} src={props.photo} />
                                 )
                             })}
                         </div>

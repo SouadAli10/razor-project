@@ -131,9 +131,9 @@ class AddForm extends Component {
                     <br />
                     {this.showPortEditor()}
                     <hr />
-                    {this.props.portfolioM.map((props) => {
+                    {this.props.portfolioM.map((props, key) => {
                         return (
-                            <ShowPortfolio key={props.id} id={props._id} description={props.description} photo={props.photo} removePortfolio={this.removePortfolio} showEditBox={this.showEditBox} HiddenEditBox={this.HiddenEditBox} />
+                            <ShowPortfolio key={props.id || key} id={props._id} description={props.description} photo={props.photo} removePortfolio={this.removePortfolio} showEditBox={this.showEditBox} HiddenEditBox={this.HiddenEditBox} />
 
                         )
 
@@ -149,5 +149,6 @@ export default withTracker(() => {
     Meteor.subscribe('portfolios')
     return {
         portfolioM: Portfolios.find({}).fetch(),
+        
     };
 })(AddForm);
