@@ -1,5 +1,5 @@
 body, html {
-	font-family: "Brandon Grotesque", sans-serif;
+	font-family: "Brandon Grotesque", "Franklin Gothic",sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: gray;
@@ -74,8 +74,6 @@ ul, ol {
 }
 ul, ol {
 	padding: 0;
-	webkit-padding: 0;
-	moz-padding: 0;
 }
 hr {
 	height: 1px;
@@ -129,7 +127,7 @@ hr {
 .navbar-custom .nav li a:hover {
 	outline: 0;
 	color: #000;
-	background-color: transparent;
+	background-color: white;
 }
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
 	outline: 0;
@@ -273,23 +271,22 @@ header .intro-text {
 /* Team Section */
 .row-team{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto 1fr 1fr;
-	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto 1fr 1fr ;
+	grid-column-gap: 40px;
 }
 .row-team::before{
-	grid-column-start: 1;
-	grid-column-end: 5;
+	display:none;
 }
+.row-team::after{
+	display:none;
+	}
 .team img{
 	height: 250px;
-	width: 180px;
+	width: 150px;
+	border-radius: 50%;
 }
 .team{
-	grid-column: span 2;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-column-gap: 20px;
 	color: rgb(33, 59, 72);
 }
 .team .postion-name .position{
@@ -303,37 +300,14 @@ header .intro-text {
 		grid-gap: 20px;
 	}
 	.row-team::before{
-		grid-column-start: 1;
-		grid-column-end: 3;
+		display: none;
+	}
+	.row-team::after{
+		display:none;
 	}
 	
 }
-/*
-.team {
-	display: block;
-	float: left;
-	width: 35%;
-	height: 45%;
-} 
-.team-portfolio{
-    margin: 39px;
-	padding-left: 20px;
-	position: relative
-}
-.team-text .team .team-pics{
-	height: 150px;
-	width: 150px;
-	float: left;
-}
-.team .position-info{
-	display: block;
-	float: left;
-}
-.team .team-info{
-	display: block;
-    float: left;
-    width: 100%;
-} */
+
 /* Portfolio Section */
 #portfolio {
 	padding: 120px 0;
@@ -345,11 +319,6 @@ header .intro-text {
 }
 .portfolio-item {
 	margin: 15px 0;
-	/* -webkit-transition: all 0.5s ease-out;
-	-moz-transition: all 0.5s ease-out;
-	-ms-transition: all 0.5s ease-out;
-	-o-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out; */
 	display: flex;
 	width: 100%;
 	margin-bottom:10px;
@@ -365,6 +334,7 @@ header .intro-text {
 .portfolio-description{ /** width of the longest portfolio icon **/
 	margin-left: 10px;
 	color:rgb(33, 59, 72);
+	align-self: center;
 }
 
 @media(max-width: 700px){
@@ -379,51 +349,17 @@ header .intro-text {
 	}
 }
 
-/* @media only screen and (min-width: 1000px){
-	.portfolio-item{
-		display: block;
-		width: 100%;
-		margin-bottom:10px;
-		position:relative;
-	}
-	.portfolio-img {
-		position: relative;
-		width: 100%;
-		height: auto;
-		float: left;
-	}
-	
-	.portfolio-img img{
-		position: relative;
-		width: 100%;
-		height: auto;
-		float: left;
-	}
-	
-} */
 /* Active */
 #Active{
 	display: block;
 	position: relative;
 }
-#Active .container .img-responsive {
-	width: 208px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;	
-	margin-bottom: 35px;
-}
-#Active .container .ActivePartnerships{
+#Active .ActivePartners{
+	display: flex;
 	color: rgb(33, 59, 72);
-	display: block;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-
 }
-#Active .container .ActivePartnerships p{
-	margin-left: -100px;
+#Active .ActivePartnerships p{
+	background-color: lightgray;
 }
 /* Contact Section */
 #contact {
@@ -570,4 +506,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .item{
 	/* z-index: 999; */
+}
+/* home button in protfolio edit page */
+.button-edit-page{
+	margin-bottom: 20%;
+	width: auto;
+}
+/* the main div in edit portfolio page */
+.main-div-edit{
+	display: grid;
 }

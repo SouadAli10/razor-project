@@ -105,8 +105,8 @@ class AddForm extends Component {
     }
     render() {
         return (
-            <div >
-                <Link className="btn btn-default btn-lg" to="/">Home</Link>
+            <div className="main-div-edit" >
+                <Link className="btn btn-default btn-lg button-edit-page" to="/">Home</Link>
                 <div className="col-md-8 col-md-offset-2">
                     <div className="row">
                         <div className="col-md-6">
