@@ -24,8 +24,8 @@ export default class ShowPortfolio extends React.Component {
                 <div className="part-2" >
                     {this.props.description}
                 </div>
+                <hr className="nonStyleHR"/>
             </div>
         )
     }
 }
-{/* <button className='btn btn-default btn-lg' onClick={editPort}>Edit</button> */ }

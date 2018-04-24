@@ -6,7 +6,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Mongo } from 'meteor/mongo';
 import { Portfolios, Images } from '../../api/portfolios.js';
 import { Meteor } from 'meteor/meteor';
-
+import Divider from "../divider.js"
 
 class AddForm extends Component {
     constructor(props) {
@@ -126,11 +126,11 @@ class AddForm extends Component {
                     <br />
                 </div>
 
-                <hr className="allWidth" />
+                <Divider />
                 <div className="protfolio-main" id="col-gray">
                     <br />
                     {this.showPortEditor()}
-                    <hr />
+                    <Divider />
                     {this.props.portfolioM.map((props, key) => {
                         return (
                             <ShowPortfolio key={props.id || key} id={props._id} description={props.description} photo={props.photo} removePortfolio={this.removePortfolio} showEditBox={this.showEditBox} HiddenEditBox={this.HiddenEditBox} />
@@ -149,6 +149,6 @@ export default withTracker(() => {
     Meteor.subscribe('portfolios')
     return {
         portfolioM: Portfolios.find({}).fetch(),
-        
+
     };
 })(AddForm);

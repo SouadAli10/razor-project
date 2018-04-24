@@ -1,5 +1,6 @@
 import React from 'react'
 import TeamItem from './TeamItems'
+import Divider from "./divider.js"
 const members = [
     {
         pic_name: "Ossama.jpg",
@@ -37,7 +38,7 @@ export default () =>
         <div className="container">
             <div className="section-title text-center center">
                 <h2>Meet Our Team</h2>
-                <hr />
+                <Divider />
             </div>
             <div className="row row-team">
                 {members.map(members => <TeamItem key={members.pic_name} {...members} />)

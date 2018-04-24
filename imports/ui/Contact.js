@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../api/sendEmail';
 import { Message, Icon } from 'semantic-ui-react';
+import Divider from "./divider.js"
 
 messageNow = (iconName, load, headerInput, messageInput) => {
     return (
@@ -124,7 +125,7 @@ export default class Contact extends Component {
                 <div className="container">
                     <div className="section-title center">
                         <h2>Get In Touch</h2>
-                        <hr />
+                        <Divider />
                     </div>
                     <div className="col-md-8 col-md-offset-2">
                         <form name="sentMessage" id="contactForm" onSubmit={this.onSubmit}>

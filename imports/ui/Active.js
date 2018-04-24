@@ -1,10 +1,11 @@
 import React from 'react';
+import Divider from "./divider.js"
 export default () =>
     <div id="Active">
         <div className="container">
             <div className="section-title text-center center">
                 <h2>Active Partnerships</h2>
-                <hr />
+                <Divider />
             </div>
             <div className="row">
                 <div className="ActivePartners">

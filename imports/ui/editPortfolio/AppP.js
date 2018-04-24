@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
 import MyForm from './myform.js';
-import LoginPage from './login.js'
+import LoginPage from './login.js';
+import Divider from "../divider.js"
 
 export default class App extends Component {
   constructor() {
@@ -28,7 +29,7 @@ export default class App extends Component {
   isLogin() {
     if (this.state.nowUser != this.state.logIn.username || this.state.nowPass != this.state.logIn.password) {
       return <LoginPage printFields={this.printFields} logIn={this.state.logIn} />
-    }else{
+    } else {
       return <MyForm {...this.state} />
     }
   }
@@ -37,7 +38,7 @@ export default class App extends Component {
       <div className="container">
         <div className="section-title text-center center">
           <h2>add Portfolio</h2>
-          <hr />
+          <Divider />
           {this.isLogin()}
         </div>
       </div>
