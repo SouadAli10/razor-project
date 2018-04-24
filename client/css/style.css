@@ -75,18 +75,7 @@ ul, ol {
 ul, ol {
 	padding: 0;
 }
-hr {
-	height: 1px;
-	width: 250px;
-	text-align: center;
-	position: relative;
-	background: transparent;
-	margin: 0 auto;
-	margin-bottom: 30px;
-	border: 1px;
-	border-bottom: 20px dotted rgb(167, 107,87);
 
-}
 /* Navigation */
 #nav {
 	z-index: 9999;
@@ -538,4 +527,27 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-bottom: 0;
 	border: none;
 	border-bottom: 1px solid black;
+}
+
+/* styling the divider part coloring and margin the dots */
+
+.divider-dot-color-1{
+	color: rgb(150, 91, 71);
+	margin-right: 2% !important;
+}
+.divider-dot-color-2{
+	color: rgb(169, 104, 79);
+	margin-right: 2% !important;
+}
+.divider-dot-color-3{
+	color: rgb(194, 129, 98);
+	margin-right: 2% !important;
+}
+.divider-dot-color-4{
+	color: rgb(235, 168, 132);
+	margin-right: 2% !important ;
+}
+.divider-dot-color-5{
+	color: rgb(243, 185, 159);
+	margin-right: 2% !important;
 }

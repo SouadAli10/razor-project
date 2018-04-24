@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Divider from "../divider.js"
 
 export default class LoginPage extends React.Component {
     constructor(props) {
@@ -27,10 +28,10 @@ export default class LoginPage extends React.Component {
         this.setState({ password: e.target.value })
     }
 
-    submit(){
-        if(this.state.username != this.props.logIn.username || this.state.password != this.props.logIn.password){
+    submit() {
+        if (this.state.username != this.props.logIn.username || this.state.password != this.props.logIn.password) {
             alert('username or password is wrong !')
-        }else{
+        } else {
             return this.props.printFields(this.state.username, this.state.password)
         }
     }
@@ -40,7 +41,7 @@ export default class LoginPage extends React.Component {
             <div className="container">
                 <div className="section-title text-center center">
                     <h2>Login to edit portfolio list</h2>
-                    <hr />
+                    <Divider />
                     <Link className="btn btn-default btn-lg" to="/">Home</Link>
                     <div className="col-md-8 col-md-offset-2">
                         <div className="row">
@@ -74,7 +75,7 @@ export default class LoginPage extends React.Component {
                             </div>
                         </div>
                         <div id="success"></div>
-                        <button type="submit" className="btn btn-default btn-lg" onClick={()=>this.submit()} >LOGIN</button>
+                        <button type="submit" className="btn btn-default btn-lg" onClick={() => this.submit()} >LOGIN</button>
                         <br />
                     </div>
 

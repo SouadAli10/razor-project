@@ -3,6 +3,7 @@ import PortfolioItem from './PortfolioItem'
 import { withTracker } from 'meteor/react-meteor-data';
 import { Mongo } from 'meteor/mongo';
 import { Portfolios, Images } from '../api/portfolios.js'
+import Divider from "./divider.js"
 
 // const items = [
 //     {
@@ -57,13 +58,13 @@ class Portfoilio extends Component {
                 <div className="container">
                     <div className="section-title text-center center">
                         <h2>Portfolio</h2>
-                        <hr />
+                        <Divider />
                     </div>
                     <div className="row">
                         <div className="portfolio-items">
                             {this.props.portfolioM.map((props, key) => {
                                 return (
-                                    <PortfolioItem key={props.id||key} id={props._id} description={props.description} src={props.photo} />
+                                    <PortfolioItem key={props.id || key} id={props._id} description={props.description} src={props.photo} />
                                 )
                             })}
                         </div>

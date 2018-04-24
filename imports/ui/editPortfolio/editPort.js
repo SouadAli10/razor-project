@@ -1,16 +1,17 @@
 import React from 'react';
+import Divider from "../divider.js"
 
 export default class ShowEditPortfolio extends React.Component {
     constructor(props) {
         super(props);
         this.handleChangeDiscrp = this.handleChangeDiscrp.bind(this);
         this.state = {
-
+            
             handleChangeDiscrp: this.handleChangeDiscrp,
             description: this.props.showFromArray[0].description
         }
     }
-
+    
     componentWillReceiveProps(nextProps) {
         const description = nextProps.showFromArray[0].description
         if (description !== this.state.description) {
@@ -25,7 +26,7 @@ export default class ShowEditPortfolio extends React.Component {
             <div>
                 <div >
                     <h2 >Edit Portfolio</h2>
-                    <hr />
+            <Divider/>
 
                     <div className="form-group">
                         <textarea name="description" id="description" className="form-control" rows="4" placeholder="description" value={this.state.description} onChange={this.state.handleChangeDiscrp} required />
