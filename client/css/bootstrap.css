@@ -3038,6 +3038,7 @@ fieldset[disabled] .btn {
   color: #333;
   background-color: #fff;
   border-color: #ccc;
+  margin-bottom: 2% !important;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -6576,8 +6577,6 @@ button.close {
   }
 }
 .protfolio-main{
-  display: grid;
-  grid-template-columns: 1fr;
   border: 3px solid gray;
 }
 .portfolios{
