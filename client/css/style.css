@@ -229,6 +229,8 @@ header .intro-text {
 #Vision .about-text .about-1 p{
 	color: white;
 	padding-top: 2px;
+	padding-top: auto;
+	padding-bottom: auto;
 }
 #Vision .about-text .about-2{
 	color: rgb(33, 59, 72);
@@ -503,6 +505,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .ui.sidebar{
 	height: auto!important;
 	position: fixed;
+	
 	top: 0
 }
 .item{
@@ -516,4 +519,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 /* the main div in edit portfolio page */
 .main-div-edit{
 	display: grid;
+}
+
+/* menu in mobile size */
+.ui.visible.left.overlay.sidebar{
+	opacity: 0.9;
 }

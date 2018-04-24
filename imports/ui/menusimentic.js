@@ -21,7 +21,7 @@ class SidebarLeftOverlay extends Component {
         return (
             <div>
                 <Button onClick={this.toggleVisibility} className="menuButton" ><Icon name='content' /></Button>
-                <Sidebar.Pushable as={Segment}>
+                
                     <Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
                         <Menu.Item name='unhide'>
                             <a className="page-scroll" href="#Vision" onClick={this.toggleVisibilityFalse}><Icon name='unhide' /><br />Our Vision</a>
@@ -61,7 +61,7 @@ class SidebarLeftOverlay extends Component {
                             <Footer />
                         </div>
                     </Sidebar.Pusher>
-                </Sidebar.Pushable>
+                
 
             </div>
         )

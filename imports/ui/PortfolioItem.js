@@ -2,8 +2,6 @@ import React from 'react';
 
 const PortfolioItem = ({ src, description }) =>
     <div className="portfolio-item">
-        {console.log(src)}
-        {console.log("" + description)}
         <div className="portfolio-img">
             <img src={"./portfolioIMG/" + src} />
         </div>
