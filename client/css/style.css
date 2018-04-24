@@ -282,12 +282,13 @@ header .intro-text {
 	display:none;
 	}
 .team img{
-	height: 250px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	border-radius: 50%;
 }
 .team{
 	color: rgb(33, 59, 72);
+	font-size: 15px;
 }
 .team .postion-name .position{
 	color: rgb(167, 107,87);

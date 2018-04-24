@@ -8,22 +8,22 @@ const members = [
         Bio: " Born in the UAE, educated in Beirut and London, and has gone on to work in a variety of industries such as steel manufacturing, insurance, and oil and gas. Moreover Oussama is a serial tech investor in Silicon Valley and frontier market opportunities."
     },
     {
+        pic_name: "Ahad.jpg",
+        Name: "AHAD BHAI",
+        Position: "PARTNER",
+        Bio: "Born in London and currently based in Dhaka, Ahad comes from a long line of industrialists. He loves exciting projects and has a flair for entrepreneurship. He has been involved in a variety of projects including film production, digital media, sports teams, telecom and more."
+    },
+    {
         pic_name: "Zoheb.jpg",
         Name: "ZOHEB AMIN KHAN ",
         Position: "PARTNER",
         Bio: "Educated in the UK and based in Dhaka, Zoheb currently works as a director in a private security company. It's his personal mission to grow the tech industry in Bangladesh and transform it into a leading market for investment."
     },
     {
-        pic_name: "Ahad.jpg",
-        Name: "AHAD MOHAMMAD BHAI",
-        Position: "PARTNER",
-        Bio: "Born in London and currently based in Dhaka, Ahad comes from a long line of industrialists. He loves exciting projects and has a flair for entrepreneurship. He has been involved in a variety of projects including film production, digital media, sports teams, telecom and more."
-    },
-    {
         pic_name: "Ramzi.jpg",
         Name: "RAMZI FARRAH",
         Position: "PARTNER",
-        Bio: "Raised in the Middle East, Ramzi has more than 9 years of experience in corporate /investment banking under his belt. His experience with Lehman Brothers, Mubadala/GE Capital and Corporate Finance House grants him a solid financial background."
+        Bio: "Raised in the Middle East, Ramzi has more than 9 years of experience in corporate investment banking under his belt. His experience with Lehman Brothers, Mubadala/GE Capital and Corporate Finance House grants him a solid financial background."
     },
     {
         pic_name: "Afshin_Picture.jpg",
