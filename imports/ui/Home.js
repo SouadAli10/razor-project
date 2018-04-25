@@ -15,7 +15,9 @@ import Portfolio from './Portfolio';
 import Active from './Active'
 import Contact from './Contact'
 import Footer from './Footer'
-import Menusimentic from './menusimentic'
+import Menusimentic from './menusimentic';
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
 // App component - represents the whole app
 class App extends Component {
   constructor(props) {
@@ -92,18 +94,29 @@ class App extends Component {
         <Header />
 
         <Navigation />
+        <Element name="#Vision" className="element" >
+          <Vision />
+        </Element>
 
-        <Vision />
+        <Element name="#Why" className="element" >
+          <Why />
+        </Element>
 
-        <Why />
+        <Element name="#Team" className="element" >
+          <Team />
+        </Element>
 
-        <Team />
+        <Element name="#portfolio" className="element" >
+          <Portfolio />
+        </Element>
 
-        <Portfolio />
+        <Element name="#Active" className="element" >
+          <Active />
+        </Element>
 
-        <Active />
-
-        <Contact />
+        <Element name="#contact" className="element" >
+          <Contact />
+        </Element>
 
         <Footer />
       </div>
