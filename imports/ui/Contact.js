@@ -143,9 +143,11 @@ export default class Contact extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-12">
                             <div className="form-group">
-                                <textarea name="message" id="message" name="message" className="form-control" rows="4" placeholder="Message" required />
+                                <textarea name="message" id="message" name="message" className="form-control" rows="4" placeholder="Message" required ></textarea>
                                 <p className="help-block text-danger"></p>
+                            </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="form-group">
