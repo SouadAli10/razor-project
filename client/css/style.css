@@ -292,6 +292,16 @@ header .intro-text {
 	color: rgb(33, 59, 72);
 	font-size: 15px;
 }
+.team .postion-name{
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	font-weight: bold;
+    font-size: 120%;
+}
+.team .position-info .team-info{
+	text-align: center;
+}
 .team .postion-name .position{
 	color: rgb(167, 107,87);
 }

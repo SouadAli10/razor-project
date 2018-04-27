@@ -25,28 +25,28 @@ class SidebarLeftOverlay extends Component {
 
                 <Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
                     <Menu.Item name='unhide'>
-                        <Link activeClass="active"  to="#Vision" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='unhide' /> <br />Our Vision</Link>
+                        
+                        <Link activeClass="active" className="test1 page-scroll" to="#Vision" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='unhide' /> <br />Our Vision</Link>
                     </Menu.Item>
                     <Menu.Item name='help!'>
-                        <Link activeClass="active"  to="#Why" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='help' /> <br />Why?</Link>
+                        <Link activeClass="active" className="test1 page-scroll" to="#Why" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='help' /> <br />Why?</Link>
                     </Menu.Item>
                     <Menu.Item name='users'>
-                        <Link activeClass="active"  to="#Team" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='users' /> <br />Team</Link>
+                        <Link activeClass="active" className="test1 page-scroll" to="#Team" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='users' /> <br />Team</Link>
                     </Menu.Item>
                     <Menu.Item name='road'>
-                        <Link activeClass="active"  to="#portfolio" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='road' /> <br />Portfolio</Link>
+                        <Link activeClass="active" className="test1 page-scroll" to="#portfolio" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='road' /> <br />Portfolio</Link>
                     </Menu.Item>
                     <Menu.Item name='sitemap'>
-                        <Link activeClass="active"  to="#Active" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='sitemap' /> <br />Partnerships</Link>
+                        <Link activeClass="active" className="test1 page-scroll" to="#Active" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='sitemap' /> <br />Partnerships</Link>
                     </Menu.Item>
                     <Menu.Item name='comments'>
-                        <Link activeClass="active"  to="#contact" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='comments' /> <br />Contact</Link>
+                        <Link activeClass="active" className="test1 page-scroll" to="#contact" spy={true} smooth={true} duration={1500} onClick={this.toggleVisibilityFalse}><Icon name='comments' /> <br />Contact</Link>
                     </Menu.Item>
                 </Sidebar>
                 <Sidebar.Pusher>
                     <div className='HtmlContainer' onClick={this.toggleVisibilityFalse} >
                         <Header />
-                        
                         <Element name="#Vision" className="element" >
                             <Vision />
                         </Element>
@@ -70,9 +70,6 @@ class SidebarLeftOverlay extends Component {
                         <Element name="#contact" className="element" >
                             <Contact />
                         </Element>
-
-
-
                         <Footer />
 
                     </div>
