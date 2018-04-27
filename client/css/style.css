@@ -116,6 +116,7 @@ ul, ol {
 	color: #f6f6f6;
 }
 .navbar-custom .nav li a {
+	cursor: pointer;
 	margin: 0 29px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -517,6 +518,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .content.icon{
 	margin: 0!important
+}
+.ui.sidebar a{
+	cursor: pointer;	
 }
 .ui.sidebar{
 	height: auto!important;
