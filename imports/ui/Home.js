@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Tasks } from '../api/tasks.js';
-import Task from './Task.js';
 import { Meteor } from 'meteor/meteor';
 import { setTimeout } from 'timers';
 import Header from './Header'
