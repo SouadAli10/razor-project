@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { withTracker } from 'meteor/react-meteor-data';
-import AccountsUIWrapper from './AccountsUIWrapper.js';
-import { Tasks } from '../api/tasks.js';
-import Task from './Task.js';
 import { Meteor } from 'meteor/meteor';
 import { setTimeout } from 'timers';
 import Header from './Header'
@@ -24,63 +20,32 @@ class App extends Component {
     super(props);
 
     this.state = {
-      hideCompleted: false,
-      width: $(window).width()
+      hideCompleted: false, //to show or hide the sidebar on mob size
+      width: $(window).width() //to see what width now and render Mob size or orginal size
     };
-  }
+  } 
 
-  handleSubmit(event) {
-    event.preventDefault();
-
-    // Find the text field via the React ref
-    const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-
-    Meteor.call('tasks.insert', text);
-    Tasks.insert({
-      text,
-      createdAt: new Date(), // current time
-      owner: Meteor.userId(),           // _id of logged in user
-      username: Meteor.user().username,  // username of logged in user
-    });
-
-    // Clear form
-    ReactDOM.findDOMNode(this.refs.textInput).value = '';
-  }
+  // Function to change show or hide the side bar on Mob size
   toggleHideCompleted() {
     this.setState({
       hideCompleted: !this.state.hideCompleted,
     });
   }
-  renderTasks() {
-    let filteredTasks = this.props.tasks;
-    if (this.state.hideCompleted) {
-      filteredTasks = filteredTasks.filter(task => !task.checked);
-    }
-    return filteredTasks.map((task) => {
-      const currentUserId = this.props.currentUser && this.props.currentUser._id;
-      const showPrivateButton = task.owner === currentUserId;
 
-      return (
-        <Task
-          key={task._id}
-          task={task}
-          showPrivateButton={showPrivateButton}
-        />
-      );
-    });
-  }
-
+  // Function to change width and used wih (whatWidth FUNCTION)
   changeWidth = () => {
     this.setState({
       width: $(window).width()
     })
   }
 
+  // Function to listen if screen size is changed
   whatWidth = () => {
     window.addEventListener("resize", this.changeWidth)
   }
 
-  phoneWidth = () => {
+  // Function to test screen size and render orginal size or Mob size, use width state
+  renderMobORFullScreen = () => {
     if (this.state.width < 768) {
       return (<Menusimentic />)
     }
@@ -88,6 +53,8 @@ class App extends Component {
       return (this.fullWidthRender())
     }
   }
+
+  // Function to render the original verion for the site
   fullWidthRender = () => {
     return (
       <div>
@@ -130,19 +97,10 @@ class App extends Component {
       <div className="my-site-wrapper">
         {this.whatWidth()}
         {console.log(this.state.width)}
-        {this.phoneWidth()}
+        {this.renderMobORFullScreen()}
       </div>
     );
   }
 }
 
-
-
-export default withTracker(() => {
-  Meteor.subscribe('tasks');
-  return {
-    tasks: Tasks.find({}, { sort: { createdAt: -1 } }).fetch(),
-    incompleteCount: Tasks.find({ checked: { $ne: true } }).count(),
-    currentUser: Meteor.user(),
-  };
-})(App);
+export default App;
