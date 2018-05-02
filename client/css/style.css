@@ -603,3 +603,15 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	color: rgb(243, 185, 159);
 	margin-right: 2% !important;
 }
+/* main menu bar styling if it's fixed or not 
+it's change when menu get at top*/
+.menuStartNotFixed{
+	position: absolute;
+	top: auto;
+	width: 100%;
+}
+.menuStartFixed{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}

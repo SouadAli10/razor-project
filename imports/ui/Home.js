@@ -13,6 +13,8 @@ import Contact from './Contact'
 import Footer from './Footer'
 import Menusimentic from './menusimentic';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { isContext } from 'vm';
+
 
 // App component - represents the whole app
 class App extends Component {
@@ -21,9 +23,32 @@ class App extends Component {
 
     this.state = {
       hideCompleted: false, //to show or hide the sidebar on mob size
-      width: $(window).width() //to see what width now and render Mob size or orginal size
+      width: $(window).width(), //to see what width now and render Mob size or orginal size
+      menuClass: "menuStartNotFixed" //to change class name of menu bar (Nav.) fixed or not fixed
     };
-  } 
+  }
+
+  // Listener function to know when the user scroll page and run changeMenuPosition function
+  scrollListener = () => {
+    window.addEventListener("scroll", this.changeMenuPosition)
+  }
+
+  // function to change className of the main menu when it's getting top
+  changeMenuPosition = () => {
+    if (document.body.scrollTop > 690.16 || document.documentElement.scrollTop > 690.16) {
+      if (this.state.menuClass == "menuStartNotFixed") {
+        this.setState({
+          menuClass: "menuStartFixed"
+        })
+      }
+    } else {
+      if (this.state.menuClass == "menuStartFixed") {
+        this.setState({
+          menuClass: "menuStartNotFixed"
+        })
+      }
+    }
+  }
 
   // Function to change show or hide the side bar on Mob size
   toggleHideCompleted() {
@@ -60,7 +85,7 @@ class App extends Component {
       <div>
         <Header />
 
-        <Navigation />
+        <Navigation className={this.state.menuClass} />
         <Element name="#Vision" className="element" >
           <Vision />
         </Element>
@@ -96,7 +121,7 @@ class App extends Component {
 
       <div className="my-site-wrapper">
         {this.whatWidth()}
-        {console.log(this.state.width)}
+        {this.scrollListener()}
         {this.renderMobORFullScreen()}
       </div>
     );
