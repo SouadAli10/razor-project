@@ -33,13 +33,13 @@ if (Meteor.isClient) {
 
 
 Meteor.methods({
-    'portfolios.edit'(portfolioId, descriptionNow) {
+    'portfolios.edit'(portfolioId, descriptionNow, URLNow) {
         // check that data is correct
         const portfolio_item = Portfolios.findOne(portfolioId)
-        Portfolios.update(portfolioId, { ...portfolio_item,description: descriptionNow })
+        Portfolios.update(portfolioId, { ...portfolio_item,description: descriptionNow, URL:URLNow })
     },
-    'portfolios.add'(description, photo) {
-        const new_portfolio_item = { description , photo}
+    'portfolios.add'(description, photo, URL) {
+        const new_portfolio_item = { description, photo, URL}
         Portfolios.insert(new_portfolio_item)
     },
 

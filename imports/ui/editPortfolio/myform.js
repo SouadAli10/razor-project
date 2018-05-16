@@ -11,6 +11,7 @@ import Divider from "../divider.js"
 class AddForm extends Component {
     constructor(props) {
         super(props);
+        this.handleChangeURL = this.handleChangeURL.bind(this);
         this.handleChangeDiscrp = this.handleChangeDiscrp.bind(this);
         this.handleChangeUpload = this.handleChangeUpload.bind(this);
         this.addPortfolio = this.addPortfolio.bind(this);
@@ -21,6 +22,7 @@ class AddForm extends Component {
         this.changePortfolio = this.changePortfolio.bind(this);
 
         this.state = {
+            handleChangeURL: this.handleChangeURL,
             handleChangeDiscrp: this.handleChangeDiscrp,
             handleChangeUpload: this.handleChangeUpload,
             addPortfolio: this.addPortfolio,
@@ -32,13 +34,14 @@ class AddForm extends Component {
             uploadVal: '',
             showFromArray: "",
             description: "",
+            URL: '',
             comment: "",
             editBox: false
         }
 
     }
-    changePortfolio(portfolioID, description) {
-        Meteor.call("portfolios.edit", portfolioID, description)
+    changePortfolio(portfolioID, description, URL) {
+        Meteor.call("portfolios.edit", portfolioID, description, URL)
         this.HiddenEditBox();
     }
     showPortEditor() {
@@ -63,6 +66,9 @@ class AddForm extends Component {
     handleChangeDiscrp(e) {
         this.setState({ description: e.target.value })
     }
+    handleChangeURL(e) {
+        this.setState({ URL: e.target.value })
+    }
     handleChangeUpload(e) {
         this.setState({ uploadVal: e.target.value })
     }
@@ -71,13 +77,14 @@ class AddForm extends Component {
     }
     addPortfolio(e) {
 
-        if (this.state.description == "") {
+        if (this.state.description == "" || this.state.URL == '') {
             this.setState({
                 comment: "HEY, there are filds empty"
             })
 
-        } else if (this.state.description != "") {
+        } else if (this.state.description != "" && this.state.URL != '') {
             const description = this.state.description
+            const URL = this.state.URL
             const file = this.fileInput.files[0]
             const upload = Images.insert({
                 file,
@@ -93,9 +100,10 @@ class AddForm extends Component {
                     const ext = fileObj.extension
                     const description = this.state.description
                     const photo = image_id + "." + ext
-                    Meteor.call("portfolios.add", description, photo)
+                    Meteor.call("portfolios.add", description, photo, URL)
                     this.setState({
                         description: "",
+                        URL: '',
                         uploadVal: ''
                     })
                 }
@@ -117,7 +125,8 @@ class AddForm extends Component {
                         </div>
                     </div>
                     <div className="form-group">
-                        <textarea name="description" id="description" value={this.state.description} onChange={this.state.handleChangeDiscrp} className="form-control" rows="4" placeholder="description" required />
+                        <textarea name="description" id="description" value={this.state.description} onChange={this.state.handleChangeDiscrp} className="form-control" rows="4" placeholder="description" required></textarea>
+                        <input name='projectURL' id='projectURL' value={this.state.URL} onChange={this.state.handleChangeURL} className="form-control" placeholder="project URL" required />
                         <p className="help-block text-danger"></p>
                     </div>
                     <div id="success"></div>
@@ -133,7 +142,7 @@ class AddForm extends Component {
                     <Divider />
                     {this.props.portfolioM.map((props, key) => {
                         return (
-                            <ShowPortfolio key={props.id || key} id={props._id} description={props.description} photo={props.photo} removePortfolio={this.removePortfolio} showEditBox={this.showEditBox} HiddenEditBox={this.HiddenEditBox} />
+                            <ShowPortfolio key={props.id || key} id={props._id} URL={props.URL} description={props.description} photo={props.photo} removePortfolio={this.removePortfolio} showEditBox={this.showEditBox} HiddenEditBox={this.HiddenEditBox} />
 
                         )
 

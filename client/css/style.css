@@ -335,7 +335,11 @@ header .intro-text {
 	.row-team::after{
 		display:none;
 	}
-	
+	.team-portfolio img{
+		display: block !important ;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 /* Portfolio Section */

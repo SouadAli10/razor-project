@@ -37,9 +37,6 @@ class App extends Component {
   // function to change className of the main menu when it's getting top
   changeMenuPosition = () => {
     const height = this.state.height
-    console.log(height)
-    console.log('body'+document.body.scrollTop)
-    console.log('document'+document.documentElement.scrollTop)
     if (document.documentElement.scrollTop < 74) {
       if (this.state.menuClass == "menuStartNotFixed" || this.state.menuClass == "menuStartFixedTop") {
         this.setState({
@@ -68,7 +65,7 @@ class App extends Component {
     });
   }
 
-  // Function to change width and used wih (whatWidth FUNCTION)
+  // Function to change width & height and used wih (whatWidth FUNCTION)
   changeWidth = () => {
     this.setState({
       width: $(window).width(),
@@ -83,7 +80,7 @@ class App extends Component {
 
   // Function to test screen size and render orginal size or Mob size, use width state
   renderMobORFullScreen = () => {
-    if (this.state.width < 768) {
+    if (this.state.width < 1200) {
       return (<Menusimentic />)
     }
     else {
