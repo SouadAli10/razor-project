@@ -592,12 +592,17 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 /* main menu bar styling if it's fixed or not 
 it's change when menu get at top*/
+.menuStartFixedButton{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
 .menuStartNotFixed{
 	position: absolute;
 	top: auto;
 	width: 100%;
 }
-.menuStartFixed{
+.menuStartFixedTop{
 	position: fixed;
 	top: 0;
 	width: 100%;

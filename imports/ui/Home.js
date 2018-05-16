@@ -25,29 +25,37 @@ class App extends Component {
       hideCompleted: false, //to show or hide the sidebar on mob size
       width: $(window).width(), //to see what width now and render Mob size or orginal size
       height: $(window).height(),
-      menuClass: "menuStartNotFixed" //to change class name of menu bar (Nav.) fixed or not fixed
+      menuClass: "menuStartFixedButton" //to change class name of menu bar (Nav.) fixed or not fixed
     };
   }
-
+  
   // Listener function to know when the user scroll page and run changeMenuPosition function
   scrollListener = () => {
     window.addEventListener("scroll", this.changeMenuPosition)
   }
-
+  
   // function to change className of the main menu when it's getting top
   changeMenuPosition = () => {
-    const height = this.state.height * 0.9
+    const height = this.state.height
     console.log(height)
-    if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
-      if (this.state.menuClass == "menuStartNotFixed") {
+    console.log('body'+document.body.scrollTop)
+    console.log('document'+document.documentElement.scrollTop)
+    if (document.documentElement.scrollTop < 74) {
+      if (this.state.menuClass == "menuStartNotFixed" || this.state.menuClass == "menuStartFixedTop") {
         this.setState({
-          menuClass: "menuStartFixed"
+          menuClass: 'menuStartFixedButton'
         })
       }
-    } else {
-      if (this.state.menuClass == "menuStartFixed") {
+    }else if (document.documentElement.scrollTop < height) {
+      if (this.state.menuClass == "menuStartFixedButton" || this.state.menuClass == "menuStartFixedTop") {
         this.setState({
-          menuClass: "menuStartNotFixed"
+          menuClass: 'menuStartNotFixed'
+        })
+      }
+    }else {
+      if (this.state.menuClass == "menuStartFixedButton" || this.state.menuClass == "menuStartNotFixed") {
+        this.setState({
+          menuClass: 'menuStartFixedTop'
         })
       }
     }
