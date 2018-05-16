@@ -50,11 +50,40 @@ h5 {
 		margin-right: -15px;
 	} */
 }
-p.intro {
+/* p.intro {
 	font-size: 16px;
 	margin: 12px 0 0;
 	line-height: 24px;
+} */
+/* The Cover page */
+.coverpage{
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-Items: center;
+	position: relative;
+	overflow: hidden;
+	background-Image: URL('../img/razor-1.png');
+	background-Size: cover;
 }
+.coverpage img{
+	max-Width: 420px;
+}
+.coverpage div{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 20vh;
+	background-Image: URL('../img/razor-3.png');
+	background-Size: cover;
+}
+@media(max-width: 700px){
+	.coverpage{
+		height: 100vh;
+	}
+}
+
 a {
 	color: #555;
 }
@@ -166,9 +195,7 @@ ul, ol {
 	object-fit: contain;
 	width: 100%;
 }
-.section-title.center {
-	padding: 10px 0 40px 0;
-}
+
 .intro h1 {
 	font-size: 60px;
 	font-weight: 600;
@@ -176,6 +203,9 @@ ul, ol {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	color: #333;
+}
+.section-title.center {
+	padding: 10px 0 40px 0;
 }
 .intro p {
 	font-size: 20px;
