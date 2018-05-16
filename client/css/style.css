@@ -321,6 +321,7 @@ header .intro-text {
 .team .postion-name .position{
 	color: rgb(167, 107,87);
 }
+
 @media(max-width: 700px){
 	.row-team{
 		display: grid;
@@ -393,6 +394,9 @@ header .intro-text {
 }
 #Active .Active_img{
 	border-right: 2px solid rgb(167, 107,87);
+}
+#Active .ActivePartners .ActivePartnerships p{
+	padding-left: 30px;
 }
 @media(max-width: 700px){
  #Active .ActivePartners{
