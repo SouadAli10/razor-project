@@ -57,7 +57,7 @@ h5 {
 } */
 /* The Cover page */
 .coverpage{
-	height: 90vh;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-Items: center;
@@ -639,4 +639,10 @@ it's change when menu get at top*/
 	position: fixed;
 	top: 0;
 	width: 100%;
+}
+
+/* menu active colore */
+a.active{
+	background-color: white;
+	color: rgb(33, 59, 72);
 }
