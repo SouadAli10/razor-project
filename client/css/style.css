@@ -167,19 +167,6 @@ ul, ol {
 	object-fit: contain;
 	width: 100%;
 }
-.intro {
-	display: table;
-	width: 100%;
-	padding: 0;
-	text-align: center;
-	color: #333;
-	background: url(../img/sdfsdf-0.jpeg) no-repeat center top;
-	background-color: #e5e5e5;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-}
 .section-title.center {
 	padding: 10px 0 40px 0;
 }
