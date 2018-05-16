@@ -1,9 +1,11 @@
 import React from 'react';
 
-const PortfolioItem = ({ src, description }) =>
+const PortfolioItem = ({ src, description, URL }) =>
     <div className="portfolio-item">
         <div className="portfolio-img">
-            <img src={"./portfolioIMG/" + src} />
+            <a href={'https://' + URL}>
+                <img src={"./portfolioIMG/" + src} />
+            </a>
         </div>
         <div className="portfolio-description"><p>{description}</p></div>
     </div>
