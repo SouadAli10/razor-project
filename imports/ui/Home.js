@@ -24,6 +24,7 @@ class App extends Component {
     this.state = {
       hideCompleted: false, //to show or hide the sidebar on mob size
       width: $(window).width(), //to see what width now and render Mob size or orginal size
+      height: $(window).height(),
       menuClass: "menuStartNotFixed" //to change class name of menu bar (Nav.) fixed or not fixed
     };
   }
@@ -35,7 +36,9 @@ class App extends Component {
 
   // function to change className of the main menu when it's getting top
   changeMenuPosition = () => {
-    if (document.body.scrollTop > 690.16 || document.documentElement.scrollTop > 690.16) {
+    const height = this.state.height * 0.9
+    console.log(height)
+    if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
       if (this.state.menuClass == "menuStartNotFixed") {
         this.setState({
           menuClass: "menuStartFixed"
@@ -60,7 +63,8 @@ class App extends Component {
   // Function to change width and used wih (whatWidth FUNCTION)
   changeWidth = () => {
     this.setState({
-      width: $(window).width()
+      width: $(window).width(),
+      height: $(window).height()
     })
   }
 
