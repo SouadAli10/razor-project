@@ -434,6 +434,9 @@ header .intro-text {
 	color: #E87E04;
 	text-align: left;
 }
+#contact .upload{
+	height: auto;
+}
 label {
 	font-size: 12px;
 	font-weight: 400;
