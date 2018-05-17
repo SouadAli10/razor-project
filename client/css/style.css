@@ -362,10 +362,13 @@ header .intro-text {
 	width:290px;
 	height:100%;
 	margin-left: 10px;
+	text-align: center;
 }
 .portfolio-img img{
-	height:100%;
-	width:100%;
+	max-width: 100%;
+	max-height: 118px;
+	width: auto;
+	margin: auto;
 }
 .portfolio-description{ /** width of the longest portfolio icon **/
 	margin-left: 10px;
