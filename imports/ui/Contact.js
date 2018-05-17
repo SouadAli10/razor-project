@@ -151,7 +151,7 @@ export default class Contact extends Component {
                             </div>
                             <div className="col-md-6">
                                 <div className="form-group">
-                                    <input type="file" id="upload" name="file" className="form-control" placeholder="Upload" />
+                                    <input type="file" id="upload" name="file" className="form-control upload" placeholder="Upload" />
                                     <p className="help-block text-danger"></p>
                                 </div>
                             </div>
