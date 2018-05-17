@@ -5,6 +5,7 @@ export default class Navigation extends React.Component {
     constructor(props){
         super(props)
     }
+
     render() {
         return (
             <div id="nav" className={this.props.className} >
@@ -17,12 +18,12 @@ export default class Navigation extends React.Component {
                         <div className="collapse navbar-collapse navbar-main-collapse">
                             <ul className="nav navbar-nav">
                                 <li className="hidden"> <a href="#page-top"></a> </li>
-                                <li><Link activeClass="active" className="test1 page-scroll" to="#Vision" spy={true} smooth={true} duration={1500} >Our Vision</Link></li>
-                                <li><Link activeClass="active" className="test1 page-scroll" to="#Why" spy={true} smooth={true} duration={1500} >Why?</Link></li>
-                                <li><Link activeClass="active" className="test1 page-scroll" to="#Team" spy={true} smooth={true} duration={2000} >Team</Link></li>
+                                <li><Link activeClass="active" className="test1 page-scroll" to="#Vision"    spy={true} smooth={true} duration={1500} >Our Vision</Link></li>
+                                <li><Link activeClass="active" className="test1 page-scroll" to="#Why"       spy={true} smooth={true} duration={1500} >Why?</Link></li>
+                                <li><Link activeClass="active" className="test1 page-scroll" to="#Team"      spy={true} smooth={true} duration={2000} >Team</Link></li>
                                 <li><Link activeClass="active" className="test1 page-scroll" to="#portfolio" spy={true} smooth={true} duration={2000} >Portfolio</Link></li>
-                                <li><Link activeClass="active" className="test1 page-scroll" to="#Active" spy={true} smooth={true} duration={2000} >Partnerships</Link></li>
-                                <li><Link activeClass="active" className="test1 page-scroll" to="#contact" spy={true} smooth={true} duration={2000} >Contact</Link></li>
+                                <li><Link activeClass="active" className="test1 page-scroll" to="#Active"    spy={true} smooth={true} duration={2000} >Partnerships</Link></li>
+                                <li><Link activeClass="active" className="test1 page-scroll" to="#contact"   spy={true} smooth={true} duration={2000} >Contact</Link></li>
                             </ul>
                         </div>
                     </div>

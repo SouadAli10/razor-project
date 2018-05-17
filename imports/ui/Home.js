@@ -24,27 +24,35 @@ class App extends Component {
     this.state = {
       hideCompleted: false, //to show or hide the sidebar on mob size
       width: $(window).width(), //to see what width now and render Mob size or orginal size
-      menuClass: "menuStartNotFixed" //to change class name of menu bar (Nav.) fixed or not fixed
+      height: $(window).height(),
+      menuClass: "menuStartFixedButton" //to change class name of menu bar (Nav.) fixed or not fixed
     };
   }
-
+  
   // Listener function to know when the user scroll page and run changeMenuPosition function
   scrollListener = () => {
     window.addEventListener("scroll", this.changeMenuPosition)
   }
-
+  
   // function to change className of the main menu when it's getting top
   changeMenuPosition = () => {
-    if (document.body.scrollTop > 690.16 || document.documentElement.scrollTop > 690.16) {
-      if (this.state.menuClass == "menuStartNotFixed") {
+    const height = this.state.height
+    if (document.documentElement.scrollTop < 74) {
+      if (this.state.menuClass == "menuStartNotFixed" || this.state.menuClass == "menuStartFixedTop") {
         this.setState({
-          menuClass: "menuStartFixed"
+          menuClass: 'menuStartFixedButton'
         })
       }
-    } else {
-      if (this.state.menuClass == "menuStartFixed") {
+    }else if (document.documentElement.scrollTop < height) {
+      if (this.state.menuClass == "menuStartFixedButton" || this.state.menuClass == "menuStartFixedTop") {
         this.setState({
-          menuClass: "menuStartNotFixed"
+          menuClass: 'menuStartNotFixed'
+        })
+      }
+    }else {
+      if (this.state.menuClass == "menuStartFixedButton" || this.state.menuClass == "menuStartNotFixed") {
+        this.setState({
+          menuClass: 'menuStartFixedTop'
         })
       }
     }
@@ -57,10 +65,11 @@ class App extends Component {
     });
   }
 
-  // Function to change width and used wih (whatWidth FUNCTION)
+  // Function to change width & height and used wih (whatWidth FUNCTION)
   changeWidth = () => {
     this.setState({
-      width: $(window).width()
+      width: $(window).width(),
+      height: $(window).height()
     })
   }
 
@@ -71,7 +80,7 @@ class App extends Component {
 
   // Function to test screen size and render orginal size or Mob size, use width state
   renderMobORFullScreen = () => {
-    if (this.state.width < 768) {
+    if (this.state.width < 1200) {
       return (<Menusimentic />)
     }
     else {

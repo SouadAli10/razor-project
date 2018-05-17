@@ -5,6 +5,39 @@ import { Mongo } from 'meteor/mongo';
 import { Portfolios, Images } from '../api/portfolios.js'
 import Divider from "./divider.js"
 
+
+class Portfoilio extends Component {
+    render() {
+        return (
+            <div id="portfolio">
+                <div className="container">
+                    <div className="section-title text-center center">
+                        <h2>Portfolio</h2>
+                        <Divider />
+                    </div>
+                    <div className="row">
+                        <div className="portfolio-items">
+                            {this.props.portfolioM.map((props, key) => {
+                                return (
+                                    <PortfolioItem key={props.id || key} id={props._id} description={props.description} src={props.photo} URL={props.URL} />
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default withTracker(() => {
+    Meteor.subscribe('portfolios')
+    return {
+        portfolioM: Portfolios.find({}).fetch(),
+    };
+})(Portfoilio);
+
+
 // const items = [
 //     {
 //         src: 'AUG_logo.jpg',
@@ -50,34 +83,3 @@ import Divider from "./divider.js"
 //         description: "A highly publicized Silicon Valley opportunity on the brink of transforming an entire industry. With the cold press juice trend set to remain very much part of the modern human diet Juicero have developed the ‘Nespresso’ of cold press juice. Participation at seed round, recent round closed a several hundred million dollar valuation."
 //     }
 // ]
-
-class Portfoilio extends Component {
-    render() {
-        return (
-            <div id="portfolio">
-                <div className="container">
-                    <div className="section-title text-center center">
-                        <h2>Portfolio</h2>
-                        <Divider />
-                    </div>
-                    <div className="row">
-                        <div className="portfolio-items">
-                            {this.props.portfolioM.map((props, key) => {
-                                return (
-                                    <PortfolioItem key={props.id || key} id={props._id} description={props.description} src={props.photo} />
-                                )
-                            })}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
-
-export default withTracker(() => {
-    Meteor.subscribe('portfolios')
-    return {
-        portfolioM: Portfolios.find({}).fetch(),
-    };
-})(Portfoilio);

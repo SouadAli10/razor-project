@@ -50,11 +50,40 @@ h5 {
 		margin-right: -15px;
 	} */
 }
-p.intro {
+/* p.intro {
 	font-size: 16px;
 	margin: 12px 0 0;
 	line-height: 24px;
+} */
+/* The Cover page */
+.coverpage{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-Items: center;
+	position: relative;
+	overflow: hidden;
+	background-Image: URL('../img/razor-1.png');
+	background-Size: cover;
 }
+.coverpage img{
+	max-Width: 420px;
+}
+.coverpage div{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 20vh;
+	background-Image: URL('../img/razor-3.png');
+	background-Size: cover;
+}
+@media(max-width: 700px){
+	.coverpage{
+		height: 100vh;
+	}
+}
+
 a {
 	color: #555;
 }
@@ -110,7 +139,6 @@ ul, ol {
 	background-color:rgb(33, 59, 72) ;
 	border-radius: 0px;
 	padding: 10px 0;
-	border-bottom: 2px solid #fff;
 }
 .navbar-custom a {
 	color: #f6f6f6;
@@ -167,9 +195,7 @@ ul, ol {
 	object-fit: contain;
 	width: 100%;
 }
-.section-title.center {
-	padding: 10px 0 40px 0;
-}
+
 .intro h1 {
 	font-size: 60px;
 	font-weight: 600;
@@ -177,6 +203,9 @@ ul, ol {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	color: #333;
+}
+.section-title.center {
+	padding: 10px 0 40px 0;
 }
 .intro p {
 	font-size: 20px;
@@ -292,6 +321,7 @@ header .intro-text {
 .team .postion-name .position{
 	color: rgb(167, 107,87);
 }
+
 @media(max-width: 700px){
 	.row-team{
 		display: grid;
@@ -305,7 +335,11 @@ header .intro-text {
 	.row-team::after{
 		display:none;
 	}
-	
+	.team-portfolio img{
+		display: block !important ;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 /* Portfolio Section */
@@ -364,6 +398,9 @@ header .intro-text {
 }
 #Active .Active_img{
 	border-right: 2px solid rgb(167, 107,87);
+}
+#Active .ActivePartners .ActivePartnerships p{
+	padding-left: 30px;
 }
 @media(max-width: 700px){
  #Active .ActivePartners{
@@ -592,13 +629,24 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 /* main menu bar styling if it's fixed or not 
 it's change when menu get at top*/
+.menuStartFixedButton{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
 .menuStartNotFixed{
 	position: absolute;
 	top: auto;
 	width: 100%;
 }
-.menuStartFixed{
+.menuStartFixedTop{
 	position: fixed;
 	top: 0;
 	width: 100%;
+}
+
+/* menu active colore */
+a.active{
+	background-color: white;
+	color: rgb(33, 59, 72);
 }
