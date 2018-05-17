@@ -265,6 +265,14 @@ header .intro-text {
 	text-align: justify;
 	text-indent: 10px;
 }
+@media(max-width: 700px){
+	.about-2-text{
+		text-align: center;
+	}
+	.why-text p{
+		text-align: center;
+	}
+}
 /*Why Section */
 #Why .container{
 	padding-bottom: 90px;
@@ -353,7 +361,12 @@ header .intro-text {
 }
 .portfolio-item {
 	margin: 20px 0;
-	display: flex;
+	/* display: flex; */
+	/* display: -webkit-box;  */
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
 	width: 100%;
 	margin-bottom:10px;
 	border-bottom: 2px dotted black;
@@ -396,8 +409,12 @@ header .intro-text {
 	position: relative;
 }
 #Active .ActivePartners{
-	display: flex;
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
 	color: rgb(33, 59, 72);
+	/* display: -webkit-box;  */
 }
 #Active .Active_img{
 	border-right: 2px solid rgb(167, 107,87);
