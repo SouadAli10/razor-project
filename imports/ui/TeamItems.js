@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'semantic-ui-react'
 import { Link } from 'react-scroll/modules';
 
-const TeamItem = ({ pic_name, Link, Name, Position, Bio }) =>
+const TeamItem = ({ pic_name, Link, Name, Position, Location, Bio }) =>
 
     <div className="team team-portfolio">
         <Image src={"../img/" + pic_name} verticalAlign='middle' size='medium' circular />
@@ -10,6 +10,7 @@ const TeamItem = ({ pic_name, Link, Name, Position, Bio }) =>
             <div className="postion-name">
               <a href={Link}  target="_blank"> {Name} </a>
                 <p className="position">{Position}</p>
+                <p className="Location">{Location}</p>
             </div>
             <div className="team-info">
                 <p>{Bio}</p>

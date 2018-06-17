@@ -224,23 +224,16 @@ header .intro-text {
 	margin-left: 10px;
 	text-align: center;
 }
-#Vision img {
-	border-radius: 50%;
-	width: 160px;
-	height: 160px;
-	display: inline-block;
-}
 #Vision p {
-	margin-top: 40px;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 	line-height: 22px;
-	padding-top: 20px;	
-
+	padding-top: 10px;	
 }
 #Vision .about-text .about-1{
 	background-color: rgb(33, 59, 72);
 	display: block;
-    height: 45px; 
+    height: auto; 
 }
 #Vision .about-text .about-1 p{
 	color: white;
@@ -323,6 +316,14 @@ header .intro-text {
 	font-weight: bold;
     font-size: 120%;
 }
+.team .Location{
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-weight: bold;
+	font-size: 100%;
+	color: rgb(167, 107,87);
+}
 .team .position-info .team-info{
 	text-align: center;
 }
@@ -361,12 +362,8 @@ header .intro-text {
 }
 .portfolio-item {
 	margin: 20px 0;
-	/* display: flex; */
+	display: flex;
 	/* display: -webkit-box;  */
-	display: -webkit-box; 
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex; 
 	width: 100%;
 	margin-bottom:10px;
 	border-bottom: 2px dotted black;
@@ -409,12 +406,15 @@ header .intro-text {
 	position: relative;
 }
 #Active .ActivePartners{
-	display: -webkit-box; 
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex; 
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	color: rgb(33, 59, 72);
-	/* display: -webkit-box;  */
+
+}
+.ActivePartnerships-Prompt{
+	font-weight: bold;
+	font-size: 100%;
+	color: rgb(167, 107,87);
 }
 #Active .Active_img{
 	border-right: 2px solid rgb(167, 107,87);
@@ -424,7 +424,8 @@ header .intro-text {
 }
 @media(max-width: 700px){
  #Active .ActivePartners{
-	display: block;
+	display: grid;
+	grid-template-columns: 1fr;
 	margin: auto;
 } 
 #Active .Active_img{

@@ -14,7 +14,16 @@ export default () =>
                     </div>
                     <div>
                         <div className="ActivePartnerships">
-                            <p>Razor New World is a Joint Venture between New World Capital Advisors and Razor Capital. New World Capital Advisors is an FCA regulated merchant banking firm covering a large influential private & institutional investor base and strong value add reputable operational partners. In this partnership Razor Capital is the VC and investment component that will help in securing more general deal-flow and local partnerships whilst providing on the ground guidance. The complimentary relationship between both firms enables Razor New World to undertake a mission targeting unique opportunities in the Monsoon region of Asia, with a focus on Bangladesh. This partnership will originate, structure, invest, help execute, and ultimately advise in carefully curated venture capital and private equity transactions in the geography of focus with fintech, consumer businesses, and clean energy constituting a part of our core focus area.</p>
+                        <p className= "ActivePartnerships-Prompt"> 
+                        Razor New World is a strategic partnership between New World Capital Advisors ('NWC') and Razor Capital.
+                        </p>
+                            <p>
+                                NWC is a regulated merchant banking firm based out of London. NWC's track record with large private & institutional investors has proved to be a strong value add to Razor's vision. The complimentary relationship between both firms enables Razor New World to undertake a mission in targeting unique opportunities in the Monsoon region.       
+                            </p>                       
+                            <p>
+                                This partnership will originate, structure, invest, help execute, and ultimately advise in carefully curated venture capital and private equity transactions in the geography of focus with fintech, consumer businesses, and renewable energy constituting a part of our core mandate.
+
+                            </p>
                         </div>
                     </div>
                 </div>
